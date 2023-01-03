@@ -260,7 +260,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private void inits() {
         // Instantiate id
-        rlBaseLayout = findViewById(R.id.rlBaseLayout);
+
         splashscreen = findViewById(R.id.splashscreen);
 
     }

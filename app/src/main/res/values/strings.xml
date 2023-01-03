@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">shamsaha</string>
+    <string name="welcome_heading">Amplify your potential</string>
+    <string name="welcome_string_1">Advocating for women\'s empowerment and protection throughout the Middle East.</string>
+    <string name="welcome_string_2">Break the silence of voilence and get help today. confidential 24/7 women\'s crisis support.</string>
+    <string name="contect_now">Contact now</string>
 </resources>

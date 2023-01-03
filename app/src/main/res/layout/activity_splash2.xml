@@ -4,12 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pink_theam"
     tools:context=".utility.SplashActivity">
 
 
+
+
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/splashscreen"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintWidth_percent="0.75"
+        app:layout_constraintHeight_percent="00.05"
+
+        android:src="@drawable/ic_launcher_background"
+        android:scaleType="fitXY"
+
 
         ></androidx.appcompat.widget.AppCompatImageView>
 

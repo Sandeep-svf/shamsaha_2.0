@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/drawable/button_custom_design.xml" value="0.18888888888888888" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/activity_splash.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/activity_splash2.xml" value="0.209375" />
       </map>
