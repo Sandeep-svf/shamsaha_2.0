@@ -4,4 +4,18 @@
     <string name="welcome_string_1">Advocating for women\'s empowerment and protection throughout the Middle East.</string>
     <string name="welcome_string_2">Break the silence of voilence and get help today. confidential 24/7 women\'s crisis support.</string>
     <string name="contect_now">Contact now</string>
+    <string name="home">Home</string>
+    <string name="about_shamsaha">About Shamsaha</string>
+    <string name="resource">Resources</string>
+    <string name="per_country">Per Country</string>
+    <string name="survivor_support_tools">Survivor Support Tools</string>
+    <string name="events_media"><![CDATA[Events & Media]]></string>
+    <string name="contect_us">Contact Us</string>
+    <string name="lock_app">Lock App</string>
+    <string name="chat_now">Chat Now</string>
+    <string name="volunteer_login">Volunteer Login</string>
+    <string name="terms_condition"><![CDATA[Terms & conditions]]></string>
+    <string name="get_envolved">Get Involved</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
