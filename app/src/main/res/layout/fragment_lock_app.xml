@@ -1,14 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pink_theam"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".lockapp.LockApp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bhu1"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/resources"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        ></androidx.appcompat.widget.AppCompatTextView>
 
-</FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="0dp"
+        android:background="@drawable/upper_side_custom_background"
+        app:layout_constraintTop_toBottomOf="@+id/bhu1"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        >
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rcv_country_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginTop="45dp"
+            app:layout_constraintWidth_percent="0.95"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+
+
+
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/bhu12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/personal_details"
+                android:textColor="@color/pink_theam"
+                android:textSize="@dimen/heading_text_14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                ></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lock_user_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:inputType="textEmailAddress"
+
+                app:layout_constraintWidth_percent="0.9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bhu12"
+                android:hint="@string/email"
+                ></androidx.appcompat.widget.AppCompatEditText>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/bhu13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_pin"
+                android:textColor="@color/pink_theam"
+                android:textSize="@dimen/heading_text_14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lock_user_email"
+                android:layout_marginTop="25dp"
+
+
+                ></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lock_user_pin_edtx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:inputType="numberPassword"
+
+                app:layout_constraintWidth_percent="0.9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bhu13"
+                android:hint="@string/enter_foru_digit_pin_number"
+                ></androidx.appcompat.widget.AppCompatEditText>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lock_confirm_user_pin_edtx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:inputType="numberPassword"
+
+                app:layout_constraintWidth_percent="0.9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lock_user_pin_edtx"
+                android:hint="@string/re_enter_four_digit"
+                ></androidx.appcompat.widget.AppCompatEditText>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintWidth_percent=".15"
+        app:layout_constraintHeight_percent="0.089"
+        app:layout_constraintVertical_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.9"
+        ></de.hdodenhof.circleimageview.CircleImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

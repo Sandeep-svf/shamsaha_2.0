@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/pink_theam"
+    android:orientation="vertical"
     tools:context=".MainActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/menubar_layoout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="55dp"
         android:background="@color/pink_theam"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,110 +56,15 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/text_container"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintWidth_percent="0.9"
-
-        app:layout_constraintVertical_bias="0.2"
-        app:layout_constraintHeight_percent="0.4"
-
-        >
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/welcome_header_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="@string/welcome_heading"
-            android:textSize="25dp"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/welcome_string_1"
-            ></androidx.appcompat.widget.AppCompatTextView>
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/welcome_string_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintTop_toBottomOf="@+id/welcome_header_title"
-            android:text="@string/welcome_string_1"
-            android:textSize="@dimen/heading_text_18sp"
-            android:textColor="@color/white"
-            android:gravity="center"
-            app:layout_constraintBottom_toTopOf="@+id/welcome_string_2"
-
-
-            ></androidx.appcompat.widget.AppCompatTextView>
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/welcome_string_2"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/welcome_string_1"
-            android:text="@string/welcome_string_2"
-            android:textSize="@dimen/heading_text_18sp"
-            android:textColor="@color/white"
-            android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-
-
-            ></androidx.appcompat.widget.AppCompatTextView>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="@string/contect_now"
-        android:textColor="@color/pink_theam"
-        android:textSize="@dimen/heading_text_20sp"
-
-        app:layout_constraintWidth_percent="0.85"
-        app:layout_constraintHeight_percent="0.075"
-        app:layout_constraintVertical_bias="0.6"
-        android:background="@drawable/button_custom_design"
-
-        ></androidx.appcompat.widget.AppCompatButton>
-
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageView27"
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-       android:scaleType="fitXY"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHeight_percent="0.3"
-        app:srcCompat="@drawable/circle" />
+        android:layout_height="match_parent"
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/photo"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHeight_percent="0.35"
-        app:srcCompat="@drawable/woman" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        ></androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

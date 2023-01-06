@@ -21,6 +21,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-    </application>
 
+
+    </application>
+    <queries> <package android:name="com.whatsapp" /> </queries>
 </manifest>

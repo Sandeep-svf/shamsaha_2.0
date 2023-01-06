@@ -1,14 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/pink_theam"
     tools:context=".getinvolved.GetInvolved">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bhu1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/get_envolved"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        ></androidx.appcompat.widget.AppCompatTextView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="0dp"
+        android:background="@drawable/upper_side_custom_background"
+        app:layout_constraintTop_toBottomOf="@+id/bhu1"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        >
+
+        <WebView
+            android:id="@+id/get_envolved_web_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+           android:layout_marginTop="40dp"
+            app:layout_constraintWidth_percent="0.95"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHeight_percent="0.65"
+            ></WebView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintWidth_percent="0.95"
+
+            app:layout_constraintTop_toBottomOf="@+id/get_envolved_web_view"
+           app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/voulnteer_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/sponser_layout"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintWidth_percent="0.75"
+                    app:layout_constraintHeight_percent="0.75"
+
+                    ></de.hdodenhof.circleimageview.CircleImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/volunteer"
+                    android:gravity="center"
+                    android:textSize="@dimen/heading_text_14sp"
+                    android:textColor="@color/pink_theam"
+                    android:textStyle="bold"
+
+                    ></androidx.appcompat.widget.AppCompatTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sponser_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/voulnteer_layout"
+                app:layout_constraintEnd_toStartOf="@+id/work_with_us_layout"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintWidth_percent="0.75"
+                    app:layout_constraintHeight_percent="0.75"
+
+                    ></de.hdodenhof.circleimageview.CircleImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/sponser"
+                    android:gravity="center"
+                    android:textSize="@dimen/heading_text_14sp"
+                    android:textColor="@color/pink_theam"
+                    android:textStyle="bold"
+
+                    ></androidx.appcompat.widget.AppCompatTextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/work_with_us_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/sponser_layout"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:layout_constraintWidth_percent="0.75"
+                    app:layout_constraintHeight_percent="0.75"
+
+                    ></de.hdodenhof.circleimageview.CircleImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/work_with_us"
+                    android:gravity="center"
+                    android:textSize="@dimen/heading_text_14sp"
+                    android:textColor="@color/pink_theam"
+                    android:textStyle="bold"
+
+                    ></androidx.appcompat.widget.AppCompatTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintWidth_percent=".15"
+        app:layout_constraintHeight_percent="0.089"
+        app:layout_constraintVertical_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.9"
+        ></de.hdodenhof.circleimageview.CircleImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
