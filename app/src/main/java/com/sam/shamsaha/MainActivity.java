@@ -1,23 +1,27 @@
 package com.sam.shamsaha;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.AppCompatTextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.webkit.WebView;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.google.android.material.imageview.ShapeableImageView;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.sam.shamsaha.aboutshamsaha.AboutShamsaha;
@@ -26,14 +30,14 @@ import com.sam.shamsaha.getinvolved.GetInvolved;
 import com.sam.shamsaha.home.home;
 import com.sam.shamsaha.lockapp.LockApp;
 import com.sam.shamsaha.resources.percountry.PerCountry;
-import com.sam.shamsaha.volunteerlogin.VolunteerLogin;
+import com.sam.shamsaha.volunteer.VolunteerLogin;
 
 public class MainActivity extends SlidingFragmentActivity implements View.OnClickListener {
 
     Animation animFadeIn, animSlideIn, animSlideInTop;
     AppCompatImageView photo, btnMenu;
     RelativeLayout dashboard_layout, chat_now, about_shamsaha, resource, per_country,
-            contact_us, survivor_support_tools, events_media, volunteer_login, lock_app,get_involved;
+            contact_us, survivor_support_tools, events_media, volunteer_login, lock_app,get_involved,terms_conditions;
     ConstraintLayout text_container,container;
     public static ConstraintLayout menubar_layoout;
     Boolean resourcesFlag = false;
@@ -43,6 +47,10 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
     public static String CURRENT_TAG = TAG_DASH_BOARD;
     private int navItemIndex;
     private static final String home = "home";
+
+    Dialog dialog;
+
+
 
 
     @Override
@@ -95,6 +103,7 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
 
     private void inits_menu() {
         volunteer_login.setOnClickListener(this::onClick);
+        terms_conditions.setOnClickListener(this::onClick);
         lock_app.setOnClickListener(this::onClick);
         btnMenu.setOnClickListener(this::onClick);
         chat_now.setOnClickListener(this::onClick);
@@ -111,6 +120,7 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
     private void inits() {
         photo = (AppCompatImageView) findViewById(R.id.photo);
         menubar_layoout = (ConstraintLayout) findViewById(R.id.menubar_layoout);
+        terms_conditions = (RelativeLayout) findViewById(R.id.terms_conditions);
         lock_app = (RelativeLayout) findViewById(R.id.lock_app);
         btnMenu = (AppCompatImageView) findViewById(R.id.btnMenu);
         btnMenu = (AppCompatImageView) findViewById(R.id.btnMenu);
@@ -144,18 +154,7 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
         switch (v.getId()) {
             case R.id.btnMenu:
                showMenu();
-               /* String contact = "+91 9625326569"; // use country code with your phone number
-                String url = "https://api.whatsapp.com/send?phone=" + contact;
-                try {
-                    PackageManager pm = getApplicationContext().getPackageManager();
-                    pm.getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES);
-                    Intent i = new Intent(Intent.ACTION_VIEW);
-                    i.setData(Uri.parse(url));
-                    startActivity(i);
-                } catch (PackageManager.NameNotFoundException e) {
-                    Toast.makeText(MainActivity.this, "Whatsapp app not installed in your phone", Toast.LENGTH_SHORT).show();
-                    e.printStackTrace();
-                }*/
+
                 break;
 
             case R.id.dashboard_layout:
@@ -242,6 +241,11 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
                 getSlidingMenu().toggle();
                 break;
             case R.id.chat_now:
+
+                // chat now fragment .....
+
+
+
                 break;
             case R.id.volunteer_login:
                 navItemIndex=6;
@@ -255,6 +259,26 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
                 getSlidingMenu().toggle();
                 break;
             case R.id.terms_conditions:
+
+                // need to add web view on popup...
+
+               openDialog(MainActivity.this);
+                Log.e("test_sam_terms","clicled..@@@@@###");
+                navItemIndex=7;
+                CURRENT_TAG = "dialog";
+   /*             final Dialog dialog = new Dialog(MainActivity.this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.terms);
+                *//*LinearLayout noDialogLogout = dialog.findViewById(R.id.noDialogLogout);
+                LinearLayout yesDialogLogout = dialog.findViewById(R.id.yesDialogLogout);*//*
+
+
+                dialog.show();
+                Window window = dialog.getWindow();
+                window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+*/
+                getSlidingMenu().toggle();
+
                 break;
 
 
@@ -294,7 +318,30 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
         }
 
     }
+    public void openDialog(Context context) {
+        dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(false);
 
+        dialog.setContentView(R.layout.terms);
+        ImageView i = dialog.findViewById(R.id.closeBtn2);
+        ProgressBar progressBar = dialog.findViewById(R.id.progressBar6);
+        WebView webView = dialog.findViewById(R.id.webViewContainer);
+        progressBar.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.GONE);
+
+        //   hitApi(context,webView,progressBar);
+        i.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+        dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().getAttributes().windowAnimations = R.anim.fade_in;
+    }
     private void loadHomeFragment() {
         home dasboardFragment = new home();
         androidx.fragment.app.FragmentManager fragmentManager = getSupportFragmentManager();

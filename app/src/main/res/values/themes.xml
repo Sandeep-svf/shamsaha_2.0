@@ -31,4 +31,13 @@
         </item>
     </style>
 
+    <style name="Theme.Shamsaha.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Shamsaha.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Shamsaha.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/purple_700"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/purple_700">
+
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:id="@+id/vol_userImageLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/smallogo"
+
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintHeight_percent="0.6"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintWidth_percent="0.25"
+
+
+            >
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vol_userImageLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/normal_text_12sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/swissra_normal"
+            android:text="vol_name"
+
+            ></androidx.appcompat.widget.AppCompatTextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/dashboard_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/home_image"
+
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:id="@+id/home_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/home_image"
+                    android:layout_toRightOf="@+id/home_image"
+                    android:text="@string/home"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/das_view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"/>
+            <RelativeLayout
+                android:id="@+id/about_shamsaha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/event_img"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:id="@+id/event_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/event_img"
+                    android:layout_toRightOf="@+id/event_img"
+                    android:text="@string/my_profile"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/get_involved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/event_img2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:id="@+id/event_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/event_img2"
+                    android:layout_toRightOf="@+id/event_img2"
+                    android:text="@string/my_shift"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <View
+                android:id="@+id/das_view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/resource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/community_img"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:id="@+id/community_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:layout_toEndOf="@+id/community_img"
+                    android:layout_toRightOf="@+id/community_img"
+                    android:text="@string/vol_calander"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:id="@+id/navigation_next_image"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_baseline_navigate_next_24"
+                    android:tint="@color/white"
+                    android:layout_alignParentRight="true"
+                    tools:ignore="UseAppTint" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/das_view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/per_country"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/donate_img"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_launcher_background"
+
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:id="@+id/donate_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/donate_img"
+                    android:layout_toRightOf="@+id/donate_img"
+                    android:text="@string/per_country"
+                    android:textColor="@color/white"
+
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/das_view8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/survivor_support_tools"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/transection_img"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:id="@+id/transection_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:layout_toEndOf="@+id/transection_img"
+                    android:layout_toRightOf="@+id/transection_img"
+                    android:text="@string/survivor_support_tools"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/das_view5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"/>
+            <RelativeLayout
+                android:id="@+id/events_media"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/setting_img"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:id="@+id/setting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/setting_img"
+                    android:layout_toRightOf="@+id/setting_img"
+                    android:text="@string/shift_swap_request"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <View
+                android:id="@+id/das_view6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/contact_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/about_img"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint"/>
+
+                <TextView
+                    android:id="@+id/about_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/about_img"
+                    android:layout_toRightOf="@+id/about_img"
+                    android:text="@string/client_service"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <View
+                android:id="@+id/das"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/lock_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/notificaiton_img"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:id="@+id/notification_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/notificaiton_img"
+                    android:layout_toRightOf="@+id/notificaiton_img"
+                    android:text="@string/on_duity_back"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <View
+                android:id="@+id/das_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone" />
+            <RelativeLayout
+                android:id="@+id/chat_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/contact_us_img"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/contact_us_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="40dp"
+
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/contact_us_img"
+                    android:layout_toRightOf="@+id/contact_us_img"
+                    android:background="@drawable/button_custom_design"
+                    android:text="@string/chat_now" />
+
+
+
+            </RelativeLayout>
+            <View
+                android:id="@+id/das_view9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"/>
+            <RelativeLayout
+                android:id="@+id/volunteer_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/logout_img"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint"/>
+
+                <TextView
+                    android:id="@+id/logout_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/logout_img"
+                    android:layout_toRightOf="@+id/logout_img"
+                    android:text="@string/volunteer_login"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/terms_conditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/logout_img2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint"/>
+
+                <TextView
+                    android:id="@+id/logout_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/logout_img2"
+                    android:layout_toRightOf="@+id/logout_img2"
+                    android:text="@string/terms_condition"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

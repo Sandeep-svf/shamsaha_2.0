@@ -1,6 +1,7 @@
-package com.sam.shamsaha.volunteerlogin;
+package com.sam.shamsaha.volunteer;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
@@ -13,9 +14,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.textfield.TextInputEditText;
 import com.sam.shamsaha.MainActivity;
 import com.sam.shamsaha.R;
+import com.sam.shamsaha.utility.StaticKey;
 
 
 public class VolunteerLogin extends Fragment {
@@ -24,6 +29,8 @@ public class VolunteerLogin extends Fragment {
     AppCompatImageView shamaha_logo;
     Animation animFadeIn, animSlideIn, animSlideInTop,animSlideInLeft;
     ConstraintLayout login_in_full_layout;
+    FloatingActionButton floating_action_button;
+    TextInputEditText email_id,password;
 
     @SuppressLint("ResourceAsColor")
     @Override
@@ -35,9 +42,37 @@ public class VolunteerLogin extends Fragment {
         set_animation();
         MainActivity.menubar_layoout.setBackgroundResource(R.color.yellow_theam);
 
+        floating_action_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(validation()){
+
+                    // write your code here......
+                    Intent intent = new Intent(getActivity(), VolunteerHomeActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
 
 
         return view;
+    }
+
+    private boolean validation() {
+
+        if(email_id.getText().toString().equals("")){
+            Toast.makeText(getActivity(), "Please enter email address", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(!email_id.getText().toString().matches(StaticKey.regexEmail)){
+            Toast.makeText(getActivity(), "Please enter valid emial address", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(password.getText().toString().equals("")){
+            Toast.makeText(getActivity(), "Please enter password", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        return true;
     }
 
     private void set_animation() {
@@ -56,6 +91,10 @@ public class VolunteerLogin extends Fragment {
         }
 
     private void inits(View view) {
+        password = view.findViewById(R.id.password);
+        email_id = view.findViewById(R.id.email_id);
+
+        floating_action_button = view.findViewById(R.id.floating_action_button);
         amplify = view.findViewById(R.id.amplify);
         login_in_full_layout = view.findViewById(R.id.login_in_full_layout);
         your = view.findViewById(R.id.your);
