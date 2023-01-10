@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/yellow_theam"
+    tools:context=".volunteer.Vol_Profile">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+
+        app:layout_constraintHeight_percent="0.9"
+        android:background="@drawable/upper_side_custom_background"
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/vol_description_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.125">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Vol Name"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_heavy"
+                android:textSize="@dimen/heading_text_18sp"
+                ></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/vol_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_book"
+                    android:gravity="center_vertical"
+                    android:text="Vol Level"
+                    android:textSize="@dimen/heading_text_14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ngr"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ngr"
+                    android:layout_width="20dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vol_level"
+                    app:layout_constraintTop_toTopOf="parent"
+
+
+                    ></androidx.appcompat.widget.AppCompatImageView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:padding="5dp"
+                    ></androidx.appcompat.widget.AppCompatImageView>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:padding="5dp"
+                    ></androidx.appcompat.widget.AppCompatImageView>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:padding="5dp"
+                    ></androidx.appcompat.widget.AppCompatImageView>
+
+
+
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/contact_card_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vol_description_layout"
+            android:layout_marginTop="15dp"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintHeight_percent="0.075"
+            app:cardCornerRadius="4dp"
+
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:text="@string/contact"
+
+                android:layout_marginStart="10dp"
+
+                android:fontFamily="@font/avenir_heavy"
+                android:textSize="@dimen/heading_text_18sp"
+                >
+
+
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/contact_arrow_down"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+
+                </androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/contact_hidden_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/contact_arrow_down"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    >
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        >
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_launcher_background"
+                            android:layout_gravity="center"
+                            ></androidx.appcompat.widget.AppCompatImageView>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9"
+                        android:text="9125658914"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+
+                        ></androidx.appcompat.widget.AppCompatTextView>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            >
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ic_launcher_background"
+                                android:layout_gravity="center"
+                                ></androidx.appcompat.widget.AppCompatImageView>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="9"
+                            android:text="9125658914"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            >
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ic_launcher_background"
+                                android:layout_gravity="center"
+                                ></androidx.appcompat.widget.AppCompatImageView>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="9"
+                            android:text="mobappssolutions@outlook.com"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/address_card_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_card_layout"
+            android:layout_marginTop="15dp"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintHeight_percent="0.075"
+            app:cardCornerRadius="4dp"
+
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    android:text="@string/address"
+
+                    android:layout_marginStart="10dp"
+
+                    android:fontFamily="@font/avenir_heavy"
+                    android:textSize="@dimen/heading_text_18sp"
+                    >
+
+
+
+                </androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/address_arrow_down"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+
+                </androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/address_hidden_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+
+
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/address_arrow_down"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    >
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            >
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ic_launcher_background"
+                                android:layout_gravity="center"
+                                ></androidx.appcompat.widget.AppCompatImageView>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="9"
+                            android:text="Sector 59 Noida India"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cpr_passport_layout"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address_card_layout"
+            android:layout_marginTop="15dp"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintHeight_percent="0.075"
+            app:cardCornerRadius="4dp"
+
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/cpr_passport_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/cpr_passport_image"
+
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    android:text="@string/cpr_passport_number"
+
+                    android:layout_marginStart="10dp"
+
+                    android:fontFamily="@font/avenir_heavy"
+                    android:textSize="@dimen/normal_text_12sp"
+                    >
+
+
+
+                </androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/cpr_passport_image"
+
+                    app:layout_constraintTop_toBottomOf="@+id/cpr_passport_heading"
+
+
+                    android:text="JDHJD984798324JDKJFSDJS"
+
+                    android:layout_marginStart="10dp"
+
+                    android:fontFamily="@font/avenir_heavy"
+                    android:textSize="@dimen/normal_text_12sp"
+                    >
+
+
+
+                </androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatImageView
+
+                    android:id="@+id/cpr_passport_image"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+
+                </androidx.appcompat.widget.AppCompatImageView>
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/language_card_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cpr_passport_layout"
+            android:layout_marginTop="15dp"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintHeight_percent="0.075"
+            app:cardCornerRadius="4dp"
+
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    android:text="@string/language"
+
+                    android:layout_marginStart="10dp"
+
+                    android:fontFamily="@font/avenir_heavy"
+                    android:textSize="@dimen/heading_text_18sp"
+                    >
+
+
+
+                </androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/language_arrow_down"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+
+                </androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/language_hidden_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+
+
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/language_arrow_down"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/official_language_lyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/kanguage1_image"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/ic_launcher_background"
+                                android:layout_gravity="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                ></androidx.appcompat.widget.AppCompatImageView>
+
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lng1_heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/kanguage1_image"
+
+                            android:text="@string/official"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintTop_toBottomOf="@+id/lng1_heading"
+                            app:layout_constraintStart_toEndOf="@+id/kanguage1_image"
+
+                            android:text="English"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/heading_text_18sp"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/additional_language_lyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/additional_image"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="20dp"
+                            android:src="@drawable/ic_launcher_background"
+                            android:layout_gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            ></androidx.appcompat.widget.AppCompatImageView>
+
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/additional_heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/additional_image"
+
+                            android:text="@string/official"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintTop_toBottomOf="@+id/additional_heading"
+                            app:layout_constraintStart_toEndOf="@+id/additional_image"
+
+                            android:text="English"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/heading_text_18sp"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/date_card_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/language_card_layout"
+            android:layout_marginTop="15dp"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintHeight_percent="0.075"
+            app:cardCornerRadius="4dp"
+
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    android:text="@string/language"
+
+                    android:layout_marginStart="10dp"
+
+                    android:fontFamily="@font/avenir_heavy"
+                    android:textSize="@dimen/heading_text_18sp"
+                    >
+
+
+
+                </androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/date_arrow_down"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+
+                </androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/date_hidden_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/date_arrow_down"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/date_language_lyt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/date_image"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="20dp"
+                            android:src="@drawable/ic_launcher_background"
+                            android:layout_gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            ></androidx.appcompat.widget.AppCompatImageView>
+
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/date_heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/date_image"
+
+                            android:text="@string/official"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintTop_toBottomOf="@+id/date_heading"
+                            app:layout_constraintStart_toEndOf="@+id/date_image"
+
+                            android:text="English"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/heading_text_18sp"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/date_language_lyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/date_image"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="20dp"
+                            android:src="@drawable/ic_launcher_background"
+                            android:layout_gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            ></androidx.appcompat.widget.AppCompatImageView>
+
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/date_heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/date_image"
+
+                            android:text="@string/official"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintTop_toBottomOf="@+id/date_heading"
+                            app:layout_constraintStart_toEndOf="@+id/date_image"
+
+                            android:text="English"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/heading_text_18sp"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/yellow_theam"
+
+
+
+        android:src="@drawable/ic_launcher_background"
+
+
+
+        ></de.hdodenhof.circleimageview.CircleImageView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

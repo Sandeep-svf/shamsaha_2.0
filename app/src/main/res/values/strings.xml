@@ -60,4 +60,20 @@
     <string name="shift_swap_request">Shift Swap Requests</string>
     <string name="client_service">Client Services</string>
     <string name="on_duity_back">On-Duty Back-Up</string>
+    <string name="privide_back_up">Provide Back-Up</string>
+    <string name="case_report">Case Report</string>
+    <string name="logout">Logout</string>
+    <string name="setting">Settings</string>
+    <string name="language_back_up">Language Back-Up</string>
+    <string name="in_person_back_up">In-Person Back-Up</string>
+    <string name="vol_resource">Resources</string>
+    <string name="vol_event_media"><![CDATA[Events & Media]]></string>
+    <string name="manager_on_duity">"Manager on "</string>
+    <string name="manager_on_duitdy">Manager on Duity (MoD)</string>
+    <string name="announcements">Announcements:</string>
+    <string name="contact">Contacts</string>
+    <string name="address">Address</string>
+    <string name="cpr_passport_number">CPR/ Passport No.</string>
+    <string name="language">Language</string>
+    <string name="official">Official</string>
 </resources>
