@@ -19,6 +19,27 @@
         android:background="@drawable/upper_side_custom_background"
         >
 
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/edit_vol_profile_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintWidth_percent="0.1"
+            app:layout_constraintHeight_percent="0.05"
+
+            android:src="@drawable/ic_launcher_background"
+
+            app:layout_constraintVertical_bias="0.05"
+            app:layout_constraintHorizontal_bias="0.9"
+
+            ></androidx.appcompat.widget.AppCompatImageView>
+
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/vol_description_layout"
             android:layout_width="wrap_content"
@@ -700,7 +721,7 @@
 
                     app:layout_constraintTop_toTopOf="parent"
 
-                    android:text="@string/language"
+                    android:text="@string/date"
 
                     android:layout_marginStart="10dp"
 
@@ -730,15 +751,12 @@
                     android:id="@+id/date_hidden_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
-
-
+                    android:visibility="gone"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/date_arrow_down"
                     android:layout_marginTop="10dp"
-                    android:orientation="vertical"
-                    >
+                    android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/date_language_lyt2"
@@ -770,7 +788,7 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/date_image"
 
-                            android:text="@string/official"
+                            android:text="@string/joining_date"
                             android:gravity="center_vertical"
                             android:layout_marginStart="10dp"
 
@@ -783,7 +801,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/date_heading"
                             app:layout_constraintStart_toEndOf="@+id/date_image"
 
-                            android:text="English"
+                            android:text="4 November 2020"
                             android:gravity="center_vertical"
                             android:textSize="@dimen/heading_text_18sp"
                             android:layout_marginStart="10dp"
@@ -801,7 +819,7 @@
 
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/date_image"
+                            android:id="@+id/date_image2"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
                             android:layout_marginStart="20dp"
@@ -815,13 +833,13 @@
 
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/date_heading"
+                            android:id="@+id/date_heading2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/date_image"
+                            app:layout_constraintStart_toEndOf="@+id/date_image2"
 
-                            android:text="@string/official"
+                            android:text="@string/birth_date"
                             android:gravity="center_vertical"
                             android:layout_marginStart="10dp"
 
@@ -831,10 +849,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
 
-                            app:layout_constraintTop_toBottomOf="@+id/date_heading"
-                            app:layout_constraintStart_toEndOf="@+id/date_image"
+                            app:layout_constraintTop_toBottomOf="@+id/date_heading2"
+                            app:layout_constraintStart_toEndOf="@+id/date_image2"
 
-                            android:text="English"
+                            android:text=" 10 October 1997"
                             android:gravity="center_vertical"
                             android:textSize="@dimen/heading_text_18sp"
                             android:layout_marginStart="10dp"

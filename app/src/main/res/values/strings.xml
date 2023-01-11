@@ -76,4 +76,13 @@
     <string name="cpr_passport_number">CPR/ Passport No.</string>
     <string name="language">Language</string>
     <string name="official">Official</string>
+    <string name="date">Date</string>
+    <string name="joining_date">Joining Date</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="phone">Phone</string>
+    <string name="please_enter_your_name">Please enter your name</string>
+    <string name="please_enter_your_phone_number">Please enter your phone number</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="please_enter_your_whatsapp_number" >Please enter your whatsapp number</string>
+    <string name="dob">Date of Birth</string>
 </resources>
