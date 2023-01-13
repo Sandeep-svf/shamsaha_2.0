@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sam.shamsaha.R
 import com.sam.shamsaha.databinding.ActivityVolResourcesKotlinBinding
 
-class VolResourcesKotlin : AppCompatActivity() {
+class VolResourcesKotlin : AppCompatActivity() , AdapterView.OnItemSelectedListener {
 
     // view binding for the activity
     private lateinit var binding: ActivityVolResourcesKotlinBinding
@@ -22,6 +22,7 @@ class VolResourcesKotlin : AppCompatActivity() {
     // in the list pass the model of Language
     private lateinit var volCountryListAdapter : VolCountryListAdapter
     private lateinit var volCountryList : List<VolCountryListModel>
+    private lateinit var spinnerCountryList : List<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,7 @@ class VolResourcesKotlin : AppCompatActivity() {
 
         // load country list
         laod_country_list()
+        laod_spine_country_list()
 
         /*** Usinng Recyler view */
         // create  layoutManager
@@ -47,6 +49,7 @@ class VolResourcesKotlin : AppCompatActivity() {
 
         // Spinner ...
         val spinner: Spinner = findViewById(R.id.country_spinner)
+        spinner.onItemSelectedListener = this
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter.createFromResource(
             this,
@@ -62,6 +65,10 @@ class VolResourcesKotlin : AppCompatActivity() {
 
     }
 
+    private fun laod_spine_country_list() {
+        spinnerCountryList = listOf("India","Ucrain","USA","china","Shree")
+    }
+
     private fun laod_country_list() {
        // add data in country list model...
 
@@ -73,19 +80,16 @@ class VolResourcesKotlin : AppCompatActivity() {
 
     }
 
+    override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+        Log.e("test_sam_spin","On item selected..."+p0+p1+p2+p3)
+    }
+
+
+
+    override fun onNothingSelected(p0: AdapterView<*>?) {
+        Log.e("test_sam_spin","On nothing selected..."+p0)
+    }
+
 
 }
 
-class SpinnerActivity : Activity(), AdapterView.OnItemSelectedListener {
-
-    override fun onItemSelected(parent: AdapterView<*>, view: View?, pos: Int, id: Long) {
-        // An item was selected. You can retrieve the selected item using
-        // parent.getItemAtPosition(pos)
-        Log.e("test_sam_spin","On item selected..."+pos)
-    }
-
-    override fun onNothingSelected(parent: AdapterView<*>) {
-        // Another interface callback
-        Log.e("test_sam_spin","On nothing selected...")
-    }
-}
