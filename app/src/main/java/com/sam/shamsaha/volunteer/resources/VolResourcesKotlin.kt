@@ -81,6 +81,11 @@ class VolResourcesKotlin : AppCompatActivity() , AdapterView.OnItemSelectedListe
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+        // on item selected from spinner ....
+
+
+        // implement countries APIs...
+
         Log.e("test_sam_spin","On item selected..."+p0+p1+p2+p3)
     }
 
