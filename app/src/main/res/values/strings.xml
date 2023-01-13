@@ -83,6 +83,16 @@
     <string name="please_enter_your_name">Please enter your name</string>
     <string name="please_enter_your_phone_number">Please enter your phone number</string>
     <string name="whatsapp">WhatsApp</string>
-    <string name="please_enter_your_whatsapp_number" >Please enter your whatsapp number</string>
+    <string name="please_enter_your_whatsapp_number">Please enter your whatsapp number</string>
     <string name="dob">Date of Birth</string>
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
 </resources>
