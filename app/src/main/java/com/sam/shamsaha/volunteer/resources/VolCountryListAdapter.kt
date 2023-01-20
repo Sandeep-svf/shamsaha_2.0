@@ -1,8 +1,10 @@
 package com.sam.shamsaha.volunteer.resources
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.sam.shamsaha.databinding.SingleItemBinding
 
 class VolCountryListAdapter(var volCountryLis: List<VolCountryListModel>,
@@ -32,6 +34,7 @@ class VolCountryListAdapter(var volCountryLis: List<VolCountryListModel>,
         with(holder){
             with(volCountryLis[position]){
                 binding.serviceName.text = this.serviceName
+
             }
         }
 

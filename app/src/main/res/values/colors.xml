@@ -4,6 +4,7 @@
     <color name="purple_500">#F05A94</color>
     <color name="purple_700">#474B54</color>
     <color name="button_click_effact_color">#3E424B</color>
+    <color name="alert_message_bg">#E6E6E5</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>

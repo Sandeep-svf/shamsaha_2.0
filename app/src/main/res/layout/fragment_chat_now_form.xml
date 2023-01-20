@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/button_click_effact_color"
+    tools:context=".chatnow.ChatNowForm">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        app:layout_constraintVertical_bias="0.075"
+
+        android:text="@string/talk_now"
+        android:fontFamily="@font/avenir_heavy"
+        android:textColor="@color/white"
+        android:textSize="@dimen/heading_text_20sp"
+
+
+        ></androidx.appcompat.widget.AppCompatTextView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/upper_side_custom_background"
+        app:layout_constraintHeight_percent="0.85"
+
+        >
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/are_you_over_18_year"
+                    android:textSize="@dimen/heading_text_14sp"
+                    android:fontFamily="@font/avenir_heavy"
+                    ></androidx.appcompat.widget.AppCompatTextView>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    >
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spin_18_year_old"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+
+                    android:background="@drawable/custom_edit_text"
+                    android:hint="@string/survivor"
+                    android:paddingStart="20dp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    >
+
+
+                </androidx.appcompat.widget.AppCompatSpinner>
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+
+
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        app:layout_constraintHorizontal_bias="0.95"
+                        android:scaleType="fitXY"
+                        android:tint="@color/button_click_effact_color"
+
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+
+
+                        ></androidx.appcompat.widget.AppCompatImageView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/please_enter_your_phone_number"
+                    android:textSize="@dimen/heading_text_14sp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/avenir_heavy"
+                    ></androidx.appcompat.widget.AppCompatTextView>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_edit_text"
+
+                    android:textSize="@dimen/heading_text_14sp"
+                    android:hint="@string/phone_number"
+                    android:inputType="number"
+                    android:paddingStart="20dp"
+
+                    ></androidx.appcompat.widget.AppCompatEditText>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/is_it_safe_for_us_to_call_you_back"
+                    android:textSize="@dimen/heading_text_14sp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/avenir_heavy"
+                    ></androidx.appcompat.widget.AppCompatTextView>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spin_call_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+
+                        android:background="@drawable/custom_edit_text"
+
+                        android:paddingStart="20dp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        ></androidx.appcompat.widget.AppCompatSpinner>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        app:layout_constraintHorizontal_bias="0.95"
+                        android:scaleType="fitXY"
+                        android:tint="@color/button_click_effact_color"
+
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                        ></androidx.appcompat.widget.AppCompatImageView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/from_what_country_you_are_calling"
+                    android:textSize="@dimen/heading_text_14sp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/avenir_heavy"
+                    ></androidx.appcompat.widget.AppCompatTextView>
+                <
+                    android:id="@+id/spin_country_calling_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_edit_text"
+
+                    android:paddingStart="20dp"
+
+                    ></>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/what_type_of_issue_you_are_facing"
+                    android:textSize="@dimen/heading_text_14sp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/avenir_heavy"
+                    ></androidx.appcompat.widget.AppCompatTextView>
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spin_issue_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_edit_text"
+
+                    android:paddingStart="20dp"
+
+                    ></androidx.appcompat.widget.AppCompatSpinner>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

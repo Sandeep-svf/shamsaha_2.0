@@ -85,6 +85,22 @@
     <string name="whatsapp">WhatsApp</string>
     <string name="please_enter_your_whatsapp_number">Please enter your whatsapp number</string>
     <string name="dob">Date of Birth</string>
+    <string name="chat">Chat</string>
+    <string name="english1">English</string>
+    <string name="arbic">عربي</string>
+    <string name="internet_call">Internet Call</string>
+    <string name="cellular_call">Cellular Call</string>
+    <string name="talk_now">Talk now</string>
+    <string name="are_you_a_new_user">Are you a new user?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="are_you_over_18_year">Are you over 18 years old?</string>
+    <string name="survivor">Survivor</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="is_it_safe_for_us_to_call_you_back">Is it safe for us to call you back, if needed?</string>
+    <string name="from_what_country_you_are_calling">From what country you are calling?</string>
+    <string name="what_type_of_issue_you_are_facing">What type of issue or abuse are you facing?</string>
+    <string name="select_topic">Please select</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>
