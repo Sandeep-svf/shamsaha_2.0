@@ -101,6 +101,8 @@
     <string name="from_what_country_you_are_calling">From what country you are calling?</string>
     <string name="what_type_of_issue_you_are_facing">What type of issue or abuse are you facing?</string>
     <string name="select_topic">Please select</string>
+    <string name="choose_language">Choose Language</string>
+    <string name="done">Done</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>

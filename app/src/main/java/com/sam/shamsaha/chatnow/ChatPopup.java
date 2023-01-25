@@ -1,7 +1,9 @@
 package com.sam.shamsaha.chatnow;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
@@ -16,13 +18,13 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sam.shamsaha.R;
 import com.sam.shamsaha.databinding.FragmentChatPopupBinding;
 
 
 public class ChatPopup extends Fragment {
-
 
     FragmentChatPopupBinding binding;
     Animation animSlideIn;
@@ -34,7 +36,48 @@ public class ChatPopup extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentChatPopupBinding.inflate(inflater,container,false);
         set_animation();
+        binding.chatWholeCardViewLayout.setVisibility(View.VISIBLE);
+        binding.askingNewUserWholeLayout.setVisibility(View.GONE);
 
+
+
+        binding.internetEnglishButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+            }
+        });
+
+        binding.internetArbicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+            }
+        });
+
+        binding.cellularEnglishButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Intent.ACTION_CALL);
+                intent.setData(Uri.parse("tel:1234546789" ));
+                startActivity(intent);
+            }
+        });
+
+        binding.cellularArbicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "1234546789"));
+                startActivity(intent);*/
+
+                Intent intent = new Intent(Intent.ACTION_CALL);
+                intent.setData(Uri.parse("tel:1234546789" ));
+                startActivity(intent);
+            }
+        });
 
         binding.yesButtonNewUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,35 +123,6 @@ public class ChatPopup extends Fragment {
             }
         });
 
-        binding.internetEnglishButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-        binding.internetArbicButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-
-        binding.cellularEnglishButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-
-        binding.cellularArbicButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
 
        /* //popup
         final LayoutInflater inflater2 = getActivity().getLayoutInflater();

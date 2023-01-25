@@ -1,16 +1,21 @@
 package com.sam.shamsaha;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -20,6 +25,7 @@ import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -30,12 +36,16 @@ import com.sam.shamsaha.getinvolved.GetInvolved;
 import com.sam.shamsaha.home.home;
 import com.sam.shamsaha.lockapp.LockApp;
 import com.sam.shamsaha.resources.percountry.PerCountry;
+import com.sam.shamsaha.utility.SplashActivity;
+import com.sam.shamsaha.utility.StaticKey;
 import com.sam.shamsaha.volunteer.VolunteerLogin;
+
+import java.util.Locale;
 
 public class MainActivity extends SlidingFragmentActivity implements View.OnClickListener {
 
     Animation animFadeIn, animSlideIn, animSlideInTop;
-    AppCompatImageView photo, btnMenu;
+    AppCompatImageView photo, btnMenu,languageChangeLayout;
     RelativeLayout dashboard_layout, chat_now, about_shamsaha, resource, per_country,
             contact_us, survivor_support_tools, events_media, volunteer_login, lock_app,get_involved,terms_conditions;
     ConstraintLayout text_container,container;
@@ -49,6 +59,9 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
     private static final String home = "home";
 
     Dialog dialog;
+    private SharedPreferences sharedPreferences;
+    private String languageFlag = StaticKey.languageEn;
+    private AlertDialog dialogs;
 
 
 
@@ -64,6 +77,40 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
         set_animation();
         inits_menu();
         my_sliding_window();
+
+
+        sharedPreferences= this.getSharedPreferences("LANGUAGE_NAME", Context.MODE_PRIVATE);
+        String checkLanguage =sharedPreferences.getString("language","");
+        Log.e("test_language","checkLanguage: "+checkLanguage);
+
+
+
+        if(languageFlag.equals(StaticKey.languageEn)){
+            Locale locale = new Locale(languageFlag);
+            Locale.setDefault(locale);
+            Configuration config = new Configuration();
+            config.locale = locale;
+            getBaseContext().getResources().updateConfiguration(config,getBaseContext().getResources().getDisplayMetrics());
+
+            Intent intent = new Intent(getApplicationContext(), SplashActivity.class);
+            startActivity(intent);
+
+        }else if(languageFlag.equals(StaticKey.languageAr)){
+            Locale locale = new Locale(languageFlag);
+            Locale.setDefault(locale);
+            Configuration config = new Configuration();
+            config.locale = locale;
+            getBaseContext().getResources().updateConfiguration(config,getBaseContext().getResources().getDisplayMetrics());
+
+            Intent intent = new Intent(getApplicationContext(),SplashActivity.class);
+            startActivity(intent);
+
+        }else{
+            Toast.makeText(getApplicationContext(), "Something went wrong. Please try again.", Toast.LENGTH_SHORT).show();
+        }
+
+
+
     }
 
     public void my_sliding_window() {
@@ -117,10 +164,12 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
         events_media.setOnClickListener(this::onClick);
         survivor_support_tools.setOnClickListener(this::onClick);
         get_involved.setOnClickListener(this::onClick);
+        languageChangeLayout.setOnClickListener(this::onClick);
     }
 
     private void inits() {
         photo = (AppCompatImageView) findViewById(R.id.photo);
+        languageChangeLayout = (AppCompatImageView) findViewById(R.id.languageChangeLayout);
         menubar_layoout = (ConstraintLayout) findViewById(R.id.menubar_layoout);
         terms_conditions = (RelativeLayout) findViewById(R.id.terms_conditions);
         lock_app = (RelativeLayout) findViewById(R.id.lock_app);
@@ -280,6 +329,39 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
                 window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 */
                 getSlidingMenu().toggle();
+
+                break;
+
+            case R.id.languageChangeLayout:
+
+                // popup for language
+
+
+
+                final LayoutInflater inflater = MainActivity.this.getLayoutInflater();
+                View alertLayout = inflater.inflate(R.layout.test_dialog_xml_otp, null);
+                final ImageView close_dialog = alertLayout.findViewById(R.id.close_dialog);
+
+                final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+
+                alert.setView(alertLayout);
+                alert.setCancelable(false);
+
+                dialogs = alert.create();
+                dialogs.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialogs.show();
+                dialogs.setCanceledOnTouchOutside(true);
+
+
+                close_dialog.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        dialogs.dismiss();
+                    }
+                });
+
+
 
                 break;
 

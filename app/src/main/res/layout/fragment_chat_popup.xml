@@ -11,7 +11,7 @@
     <androidx.cardview.widget.CardView
 
         android:id="@+id/asking_new_user_whole_layout"
-
+        android:visibility="gone"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -161,7 +161,6 @@
 
     <androidx.cardview.widget.CardView
 
-        android:visibility="gone"
         android:id="@+id/chat_whole_card_view_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -169,18 +168,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-
-
         app:layout_constraintWidth_percent="0.8"
-
         app:layout_constraintHeight_percent="0.6"
-
         app:cardCornerRadius="@dimen/heading_text_14sp"
-        android:elevation="@dimen/heading_text_14sp"
-
-
-
-        >
+        android:elevation="@dimen/heading_text_14sp">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

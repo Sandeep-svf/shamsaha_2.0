@@ -7,52 +7,106 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <TextView
-        android:layout_marginTop="20dp"
-        android:id="@+id/error_message"
-        android:layout_marginLeft="20dp"
-
-        android:gravity="center|top"
-        android:layout_marginRight="20dp"
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:weightSum="10"
+        >
+
+        <TextView
+            android:layout_weight="8"
+            android:id="@+id/error_message"
+            android:gravity="center|top"
+            android:layout_width="0dp"
+            android:text="@string/choose_language"
+            android:fontFamily="@font/avenir_heavy"
+            android:textSize="@dimen/heading_text_20sp"
+            android:layout_height="36dp">
+
+        </TextView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+
+            android:layout_weight="2"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/close_dialog"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_background"
+               app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                ></androidx.appcompat.widget.AppCompatImageView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+ <androidx.appcompat.widget.LinearLayoutCompat
+     android:layout_width="match_parent"
+     android:layout_height="40dp"
+
+     >
+
+     <RadioButton
+
+         android:layout_width="25dp"
+         android:layout_height="25dp"
+
+         ></RadioButton>
+
+
+     <androidx.appcompat.widget.AppCompatTextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/english1"
+         android:fontFamily="@font/avenir_heavy"
+         android:textSize="@dimen/heading_text_14sp"
+         android:layout_marginStart="20dp"
+         ></androidx.appcompat.widget.AppCompatTextView>
+ </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
 
         >
 
-    </TextView>
+        <RadioButton
 
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_alignParentLeft="true"
-        android:layout_width="fill_parent"
-        android:orientation="vertical"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:layout_height="80dp">
+            android:layout_width="25dp"
+            android:layout_height="25dp"
 
-        <ImageView
-            android:id="@+id/close_dialog"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:foregroundGravity="center"
-            android:layout_marginTop="10dp"
-
-            android:src="@drawable/ic_launcher_background"
-
-            >
-
-        </ImageView>
-
-        <TextView
+            ></RadioButton>
 
 
-            android:layout_width="50dp"
-            android:layout_height="40dp"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/english1"
+            android:fontFamily="@font/avenir_heavy"
+            android:textSize="@dimen/heading_text_14sp"
+            android:layout_marginStart="20dp"
+            ></androidx.appcompat.widget.AppCompatTextView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-            android:text="close"
-            ></TextView>
-
-    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="120dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:background="@drawable/custom_button_pick"
+        android:text="@string/done"
+        android:fontFamily="@font/avenir_heavy"
+        android:textSize="@dimen/heading_text_14sp"
+        android:textColor="@color/white"
+        ></androidx.appcompat.widget.AppCompatButton>
 
 
 

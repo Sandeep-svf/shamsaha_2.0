@@ -107,6 +107,8 @@ public class SplashActivity extends AppCompatActivity {
             permissionsNeeded.add("Location");
         if(!addPermission(permissionsList, Manifest.permission.ACCESS_FINE_LOCATION))
             permissionsNeeded.add("Location");
+        if(!addPermission(permissionsList, Manifest.permission.CALL_PHONE))
+            permissionsNeeded.add("CALL PHONE");
 
         if (permissionsList.size() > 0) {
             if (permissionsNeeded.size() > 0) {
@@ -138,19 +140,7 @@ public class SplashActivity extends AppCompatActivity {
             Log.e("CHECK","C");
             Log.e("test_login_splash","Started");
 
-//            /* Create an Intent that will start the Menu-Activity. */
-//            Intent mainIntent = new Intent(splashActivity.this, LoginActivity.class);
-//            splashActivity.this.startActivity(mainIntent);
-//            splashActivity.this.finish();
 
-
-
-
-               /* //geting userID data
-                SharedPreferences getUserIdData = getSharedPreferences("AUTHENTICATION_FILE_NAME", MODE_PRIVATE);
-                userId = getUserIdData.getString("userId", "");
-                userType = getUserIdData.getString("userType", "");
-                Log.e("test_login_splash","userId is :"+userId);*/
             Intent intent=new Intent(SplashActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
@@ -225,6 +215,7 @@ public class SplashActivity extends AppCompatActivity {
             perms.put(Manifest.permission.CALL_PHONE, PackageManager.PERMISSION_GRANTED);
             perms.put(Manifest.permission.WRITE_EXTERNAL_STORAGE, PackageManager.PERMISSION_GRANTED);
 
+
             for (int i = 0; i < permissions.length; i++) {
                 perms.put(permissions[i], grantResults[i]);
             }
@@ -242,6 +233,7 @@ public class SplashActivity extends AppCompatActivity {
                     perms.get(Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED &&
                     perms.get(Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED &&
                     perms.get(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
+
             ) {
                 Intent intent=new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
