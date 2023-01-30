@@ -6,6 +6,14 @@ plugins {
 android {
     compileSdk 32
 
+
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
     defaultConfig {
         applicationId "com.sam.shamsaha"
         minSdk 21

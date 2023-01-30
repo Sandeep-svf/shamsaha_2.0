@@ -1,6 +1,7 @@
 package com.sam.shamsaha;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -24,6 +25,7 @@ import android.view.animation.AnimationUtils;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,6 +38,7 @@ import com.sam.shamsaha.getinvolved.GetInvolved;
 import com.sam.shamsaha.home.home;
 import com.sam.shamsaha.lockapp.LockApp;
 import com.sam.shamsaha.resources.percountry.PerCountry;
+import com.sam.shamsaha.utility.Splash2Activity;
 import com.sam.shamsaha.utility.SplashActivity;
 import com.sam.shamsaha.utility.StaticKey;
 import com.sam.shamsaha.volunteer.VolunteerLogin;
@@ -45,6 +48,7 @@ import java.util.Locale;
 public class MainActivity extends SlidingFragmentActivity implements View.OnClickListener {
 
     Animation animFadeIn, animSlideIn, animSlideInTop;
+    MainActivity mainActivity;
     AppCompatImageView photo, btnMenu,languageChangeLayout;
     RelativeLayout dashboard_layout, chat_now, about_shamsaha, resource, per_country,
             contact_us, survivor_support_tools, events_media, volunteer_login, lock_app,get_involved,terms_conditions;
@@ -65,9 +69,6 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
 
 
 
-
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,40 +77,79 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
         inits();
         set_animation();
         inits_menu();
-        my_sliding_window();
-
 
         sharedPreferences= this.getSharedPreferences("LANGUAGE_NAME", Context.MODE_PRIVATE);
-        String checkLanguage =sharedPreferences.getString("language","");
-        Log.e("test_language","checkLanguage: "+checkLanguage);
+        StaticKey.appLanguage =sharedPreferences.getString("language","");
+        Log.e("test_language","checkLanguage: "+StaticKey.appLanguage);
 
 
-
-        if(languageFlag.equals(StaticKey.languageEn)){
-            Locale locale = new Locale(languageFlag);
+        if(StaticKey.appLanguage.equals(StaticKey.languageEn)){
+            Locale locale = new Locale(StaticKey.appLanguage);
             Locale.setDefault(locale);
             Configuration config = new Configuration();
             config.locale = locale;
             getBaseContext().getResources().updateConfiguration(config,getBaseContext().getResources().getDisplayMetrics());
 
-            Intent intent = new Intent(getApplicationContext(), SplashActivity.class);
-            startActivity(intent);
 
-        }else if(languageFlag.equals(StaticKey.languageAr)){
-            Locale locale = new Locale(languageFlag);
+
+        }else if(StaticKey.appLanguage.equals(StaticKey.languageAr)){
+            Locale locale = new Locale(StaticKey.appLanguage);
             Locale.setDefault(locale);
             Configuration config = new Configuration();
             config.locale = locale;
             getBaseContext().getResources().updateConfiguration(config,getBaseContext().getResources().getDisplayMetrics());
 
-            Intent intent = new Intent(getApplicationContext(),SplashActivity.class);
-            startActivity(intent);
 
         }else{
-            Toast.makeText(getApplicationContext(), "Something went wrong. Please try again.", Toast.LENGTH_SHORT).show();
+            Locale locale = new Locale(StaticKey.languageEn);
+            Locale.setDefault(locale);
+            Configuration config = new Configuration();
+            config.locale = locale;
+            getBaseContext().getResources().updateConfiguration(config,getBaseContext().getResources().getDisplayMetrics());
+
+            // Toast.makeText(getApplicationContext(), "Something went wrong. Please try again.", Toast.LENGTH_SHORT).show();
         }
 
 
+        LoadLanguage();
+
+
+        if(StaticKey.appLanguage.equals(StaticKey.languageEn)){
+            my_sliding_window();
+        }else if(StaticKey.appLanguage.equals(StaticKey.languageAr)){
+            my_sliding_window_arabic();
+        }else{
+            Toast.makeText(MainActivity.this, "something went wrong while loading language... Please restart app.", Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
+
+    private void my_sliding_window_arabic() {
+        try {
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION);
+
+            final Display display = getWindowManager().getDefaultDisplay();
+            int screenWidth = display.getWidth();
+            //int screenWidth = getScreenWidthInPixel();
+            final int slidingmenuWidth = (int) (screenWidth - (screenWidth / 3.7) + 20);
+            final int offset = Math.max(0, screenWidth - slidingmenuWidth);
+            getSlidingMenu().setBehindOffset(offset);
+            getSlidingMenu().toggle();
+            getSlidingMenu().isVerticalFadingEdgeEnabled();
+            getSlidingMenu().isHorizontalFadingEdgeEnabled();
+            getSlidingMenu().setMode(SlidingMenu.RIGHT);
+            getSlidingMenu().setFadeEnabled(true);
+            getSlidingMenu().setFadeDegree(0.5f);
+            getSlidingMenu().setFadingEdgeLength(10);
+            getSlidingMenu().setEnabled(false);
+            int width = display.getWidth(); // deprecated
+            int height = display.getHeight();
+            mainActivity = MainActivity.this;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -143,6 +183,10 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
             fragmentTransaction1231212121212.add(R.id.container, home, CURRENT_TAG);
             fragmentTransaction1231212121212.commit();
             getSlidingMenu().toggle();
+
+
+
+
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -190,6 +234,14 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
         text_container = (ConstraintLayout) findViewById(R.id.text_container);
     }
 
+    public void LoadLanguage(){
+
+        Locale locale = new Locale(StaticKey.appLanguage);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+    }
     private void set_animation() {
         animSlideIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in_bottom_custom);
         animSlideInTop = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in_top_custom);
@@ -297,6 +349,9 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
 
 
 
+
+
+
                 break;
             case R.id.volunteer_login:
                 navItemIndex=6;
@@ -341,6 +396,9 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
                 final LayoutInflater inflater = MainActivity.this.getLayoutInflater();
                 View alertLayout = inflater.inflate(R.layout.test_dialog_xml_otp, null);
                 final ImageView close_dialog = alertLayout.findViewById(R.id.close_dialog);
+                final RadioButton english_lang_button = alertLayout.findViewById(R.id.english_lang_button);
+                final RadioButton arbic_lang_button = alertLayout.findViewById(R.id.arbic_lang_button);
+                final AppCompatButton language_change_button = alertLayout.findViewById(R.id.language_change_button);
 
                 final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
 
@@ -352,6 +410,39 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
                 dialogs.show();
                 dialogs.setCanceledOnTouchOutside(true);
 
+
+                english_lang_button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        english_lang_button.setChecked(true);
+                        arbic_lang_button.setChecked(false);
+                        StaticKey.appLanguage = StaticKey.languageEn;
+                    }
+                });
+
+                arbic_lang_button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        english_lang_button.setChecked(false);
+                        arbic_lang_button.setChecked(true);
+                        StaticKey.appLanguage = StaticKey.languageAr;
+                    }
+                });
+
+                language_change_button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        sharedPreferences = MainActivity.this.getSharedPreferences("LANGUAGE_NAME", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("language", StaticKey.appLanguage);
+                        editor.apply();
+
+                        Intent langIntent = new Intent(MainActivity.this, Splash2Activity.class);
+                        startActivity(langIntent);
+
+                    }
+                });
 
                 close_dialog.setOnClickListener(new View.OnClickListener() {
                     @Override

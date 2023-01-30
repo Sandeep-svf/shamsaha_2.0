@@ -27,15 +27,15 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="36dp"
-
             android:layout_weight="2"
             >
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:id="@+id/close_dialog"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/ic_baseline_cancel_24"
                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -56,6 +56,7 @@
      >
 
      <RadioButton
+         android:id="@+id/english_lang_button"
 
          android:layout_width="25dp"
          android:layout_height="25dp"
@@ -81,6 +82,7 @@
 
         <RadioButton
 
+            android:id="@+id/arbic_lang_button"
             android:layout_width="25dp"
             android:layout_height="25dp"
 
@@ -90,7 +92,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/english1"
+            android:text="@string/arbic1"
             android:fontFamily="@font/avenir_heavy"
             android:textSize="@dimen/heading_text_14sp"
             android:layout_marginStart="20dp"
@@ -98,6 +100,7 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/language_change_button"
         android:layout_width="120dp"
         android:layout_height="36dp"
         android:layout_gravity="center"
