@@ -349,9 +349,6 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
 
 
 
-
-
-
                 break;
             case R.id.volunteer_login:
                 navItemIndex=6;
