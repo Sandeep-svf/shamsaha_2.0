@@ -41,7 +41,7 @@ class VolResourcesKotlin : AppCompatActivity() , AdapterView.OnItemSelectedListe
         binding.rcvCountryList.setLayoutManager(layoutManager)
         // initialize the adapter,
         // and pass the required argument
-        volCountryListAdapter = VolCountryListAdapter(volCountryList)
+        volCountryListAdapter = VolCountryListAdapter(this,volCountryList)
         // attach adapter to the recycler view
         binding.rcvCountryList.adapter = volCountryListAdapter
 

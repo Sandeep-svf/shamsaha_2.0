@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sam.shamsaha.R
@@ -19,6 +20,8 @@ class VolResourcesFragment : Fragment() , AdapterView.OnItemSelectedListener {
 
     // create reference to the adapter and the list
     // in the list pass the model of Language
+    /*** The “lateinit” keyword in Kotlin as the name suggests is used to declare those variables
+     * that are guaranteed to be initialized in the future */
     private lateinit var volCountryListAdapter : VolCountryListAdapter
     private lateinit var volCountryList : List<VolCountryListModel>
     private lateinit var spinnerCountryList : List<String>
@@ -43,7 +46,7 @@ class VolResourcesFragment : Fragment() , AdapterView.OnItemSelectedListener {
         binding!!.rcvCountryList.setLayoutManager(layoutManager)
         // initialize the adapter,
         // and pass the required argument
-        volCountryListAdapter = VolCountryListAdapter(volCountryList)
+        volCountryListAdapter = VolCountryListAdapter(requireContext(),volCountryList)
         // attach adapter to the recycler view
         binding!!.rcvCountryList.adapter = volCountryListAdapter
 
@@ -78,8 +81,11 @@ class VolResourcesFragment : Fragment() , AdapterView.OnItemSelectedListener {
         // add data in country list model...
 
         volCountryList = listOf(
-
-
+            VolCountryListModel("Java","2"),
+            VolCountryListModel("C","5"),
+            VolCountryListModel("Java","9"),
+            VolCountryListModel("Java","10"),
+            VolCountryListModel("Java","12")
         )
 
 
@@ -87,6 +93,10 @@ class VolResourcesFragment : Fragment() , AdapterView.OnItemSelectedListener {
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
 
+        // getting stirng value form spinner ....
+        val text: String = p0?.getItemAtPosition(p2).toString()
+
+        Toast.makeText(activity, text, Toast.LENGTH_SHORT).show()
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {
