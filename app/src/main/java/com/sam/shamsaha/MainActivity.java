@@ -84,6 +84,7 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
 
 
         if(StaticKey.appLanguage.equals(StaticKey.languageEn)){
+            Log.e("test_sam_lang","en");
             Locale locale = new Locale(StaticKey.appLanguage);
             Locale.setDefault(locale);
             Configuration config = new Configuration();
@@ -93,6 +94,7 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
 
 
         }else if(StaticKey.appLanguage.equals(StaticKey.languageAr)){
+            Log.e("test_sam_lang","ar");
             Locale locale = new Locale(StaticKey.appLanguage);
             Locale.setDefault(locale);
             Configuration config = new Configuration();
@@ -101,6 +103,7 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
 
 
         }else{
+            Log.e("test_sam_lang","else en");
             Locale locale = new Locale(StaticKey.languageEn);
             Locale.setDefault(locale);
             Configuration config = new Configuration();
@@ -146,6 +149,17 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
             int width = display.getWidth(); // deprecated
             int height = display.getHeight();
             mainActivity = MainActivity.this;
+
+
+            CURRENT_TAG = home;
+
+            home home = new home();
+            androidx.fragment.app.FragmentManager fragmentManager12312121212 = getSupportFragmentManager();
+            ((ConstraintLayout) findViewById(R.id.container)).removeAllViews();
+            androidx.fragment.app.FragmentTransaction fragmentTransaction1231212121212 = fragmentManager12312121212.beginTransaction();
+            fragmentTransaction1231212121212.add(R.id.container, home, CURRENT_TAG);
+            fragmentTransaction1231212121212.commit();
+            getSlidingMenu().toggle();
 
         } catch (Exception e) {
             e.printStackTrace();

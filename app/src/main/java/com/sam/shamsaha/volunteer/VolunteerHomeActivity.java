@@ -3,6 +3,8 @@ package com.sam.shamsaha.volunteer;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,6 +21,8 @@ import com.sam.shamsaha.MainActivity;
 import com.sam.shamsaha.R;
 import com.sam.shamsaha.home.home;
 import com.sam.shamsaha.volunteer.dashboard.Vol_Home;
+import com.sam.shamsaha.volunteer.resources.VolResourcesFragment;
+import com.sam.shamsaha.volunteer.resources.VolResourcesKotlin;
 
 public class VolunteerHomeActivity extends SlidingFragmentActivity implements View.OnClickListener {
 
@@ -172,12 +176,30 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
 
 
                 Vol_Profile vol_profile = new Vol_Profile();
-                androidx.fragment.app.FragmentManager fragmentManager12312121212 = getSupportFragmentManager();
+                FragmentManager fragmentManager12312121212 = getSupportFragmentManager();
                 ((ConstraintLayout) findViewById(R.id.container_vol)).removeAllViews();
-                androidx.fragment.app.FragmentTransaction fragmentTransaction12312121212 = fragmentManager12312121212.beginTransaction();
+                FragmentTransaction fragmentTransaction12312121212 = fragmentManager12312121212.beginTransaction();
                 fragmentTransaction12312121212.replace(R.id.container_vol, vol_profile, CURRENT_TAG);
                 fragmentTransaction12312121212.commit();
                 getSlidingMenu().toggle();
+
+
+                break;
+
+
+
+            case R.id.resourse_layout_vol:
+
+                VolResourcesFragment volResourcesKotlin = new VolResourcesFragment();
+
+                FragmentManager fragmentManagerVolResources = getSupportFragmentManager();
+                ((ConstraintLayout) findViewById(R.id.container_vol)).removeAllViews();
+                FragmentTransaction fragmentTransactionVolResources = fragmentManagerVolResources.beginTransaction();
+                fragmentTransactionVolResources.replace(R.id.container_vol,volResourcesKotlin,CURRENT_TAG);
+                fragmentTransactionVolResources.commit();
+                getSlidingMenu().toggle();
+
+
 
 
                 break;
