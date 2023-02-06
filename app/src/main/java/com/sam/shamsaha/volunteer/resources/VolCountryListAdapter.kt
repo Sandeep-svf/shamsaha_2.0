@@ -42,12 +42,9 @@ class VolCountryListAdapter( var context: Context, var volCountryLis: List<VolCo
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
 
 
-
-
         with(holder){
             with(volCountryLis[position]){
                 binding.serviceName.text = this.serviceName
-
 
                 binding.itemView.setOnClickListener{ view ->
 
@@ -62,12 +59,7 @@ class VolCountryListAdapter( var context: Context, var volCountryLis: List<VolCo
                     myToast.setGravity(Gravity.LEFT,200,200)
                     myToast.show()
 
-
                 }
-
-
-
-
 
             }
 
@@ -80,6 +72,8 @@ class VolCountryListAdapter( var context: Context, var volCountryLis: List<VolCo
         transaction.replace(R.id.container_vol, fragment)
         transaction.commit()
     }
+
+
 
 
     override fun getItemCount(): Int {
