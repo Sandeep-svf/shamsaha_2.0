@@ -4,6 +4,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.commit
 import android.content.Context
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -56,6 +57,10 @@ class VolCountryListAdapter( var context: Context, var volCountryLis: List<VolCo
                     toast(R.string.message)
                     longToast("Wow, such a duration")*/
                     replaceFragment(VolResourcesDetialsFragment())
+
+                    val myToast = Toast.makeText(context,"toast message :"+itemPosition,Toast.LENGTH_SHORT)
+                    myToast.setGravity(Gravity.LEFT,200,200)
+                    myToast.show()
 
 
                 }

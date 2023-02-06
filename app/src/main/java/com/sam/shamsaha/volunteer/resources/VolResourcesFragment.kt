@@ -50,7 +50,6 @@ class VolResourcesFragment : Fragment() , AdapterView.OnItemSelectedListener {
         // attach adapter to the recycler view
         binding!!.rcvCountryList.adapter = volCountryListAdapter
 
-
         // Spinner ...
 
         binding!!.countrySpinner.onItemSelectedListener = this
@@ -87,7 +86,6 @@ class VolResourcesFragment : Fragment() , AdapterView.OnItemSelectedListener {
             VolCountryListModel("Java","10"),
             VolCountryListModel("Java","12")
         )
-
 
     }
 
