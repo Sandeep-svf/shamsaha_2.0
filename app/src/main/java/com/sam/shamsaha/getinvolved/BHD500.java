@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.sam.shamsaha.R;
 import com.sam.shamsaha.databinding.FragmentBHD500Binding;
+import com.sam.shamsaha.utility.StaticKey;
 
 
 public class BHD500 extends Fragment {
@@ -28,6 +29,7 @@ public class BHD500 extends Fragment {
         binding.backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                StaticKey.sponsorKey = "1";
                 Sponsor sponsor = new Sponsor();
                 replace_fragment(sponsor);
 

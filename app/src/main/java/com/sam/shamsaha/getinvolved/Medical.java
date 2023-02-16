@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.sam.shamsaha.R;
 import com.sam.shamsaha.databinding.FragmentMedicalBinding;
+import com.sam.shamsaha.utility.StaticKey;
 
 
 public class Medical extends Fragment {
@@ -30,6 +31,7 @@ public class Medical extends Fragment {
        binding.backArrow.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
+               StaticKey.sponsorKey = "0";
                Sponsor sponsor = new Sponsor();
                replace_fragment(sponsor);
 

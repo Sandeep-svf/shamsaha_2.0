@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import com.sam.shamsaha.R;
 import com.sam.shamsaha.databinding.FragmentAdditonalOptionBinding;
 import com.sam.shamsaha.databinding.FragmentBHD500Binding;
+import com.sam.shamsaha.utility.StaticKey;
 
 public class AdditonalOption extends Fragment {
 
@@ -28,6 +29,7 @@ public class AdditonalOption extends Fragment {
         binding.backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                StaticKey.sponsorKey = "1";
                 Sponsor sponsor = new Sponsor();
                 replace_fragment(sponsor);
 

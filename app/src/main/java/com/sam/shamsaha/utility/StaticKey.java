@@ -6,4 +6,5 @@ public class StaticKey {
     public static final String languageAr = "ar";
     public static  String appLanguage = "en";
     public static  String languageData ;
+    public static String sponsorKey="0";
 }

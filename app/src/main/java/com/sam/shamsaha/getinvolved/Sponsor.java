@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import com.google.android.material.tabs.TabLayout;
 import com.sam.shamsaha.R;
 import com.sam.shamsaha.databinding.FragmentSponsorBinding;
+import com.sam.shamsaha.utility.StaticKey;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +37,15 @@ public class Sponsor extends Fragment {
         setupViewPager(binding.viewPagerSponser,adapter);
         binding.tabs.setupWithViewPager(binding.viewPagerSponser);
         setupTabtitle();
+
+        if(StaticKey.sponsorKey.equals("0")){
+            binding.viewPagerSponser.setCurrentItem(0);
+        }else if(StaticKey.sponsorKey.equals("1")){
+            binding.viewPagerSponser.setCurrentItem(1);
+        }else{
+            binding.viewPagerSponser.setCurrentItem(0);
+        }
+
 
 
         binding.backArrow.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +90,7 @@ public class Sponsor extends Fragment {
     static class ViewPagerAdapter extends FragmentPagerAdapter
     {
         private final List<Fragment> mFragmentList = new ArrayList<>();
-        private final List<String> mFragmentTitleList = new ArrayList<>();
+
 
         public ViewPagerAdapter(FragmentManager manager) {
             super(manager);
