@@ -3,6 +3,8 @@ package com.sam.shamsaha.getinvolved;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,9 +27,25 @@ public class General extends Fragment {
        View view = binding.getRoot();
 
 
+        binding.backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Sponsor sponsor = new Sponsor();
+                replace_fragment(sponsor);
+
+            }
+        });
+
+
 
 
 
        return view;
+    }
+    private void replace_fragment(Fragment fragment) {
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container,fragment);
+        fragmentTransaction.commit();
     }
 }

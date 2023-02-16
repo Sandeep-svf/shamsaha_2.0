@@ -112,6 +112,14 @@
     <string name="corporate">CORPORATE</string>
     <string name="raw_string">" Whether it be bribery, getting a desired day in court, or any sort of unjust practice to sway the results of a trial, India’s judicial system remains as one riddled with corruption from many sides. Lawyers, administrative staff, judges, defendants, and more have used these practices to sway countless cases, and exist at all levels of the court system. While the Indian Supreme Court is generally reserved for the cases of highest importance or urgency, because of petitions and the implementation of bribery, the public or individuals outside the Supreme Court have been able to decide what cases go to the highest court of law in India."</string>
     <string name="medical_quantity">Medical Quantity</string>
+    <string name="medical">Medical</string>
+    <string name="bhd">BHD</string>
+    <string name="debit">Debit</string>
+    <string name="credit">Credit</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="memo">Memo</string>
+    <string name="amount">Amount</string>
+    <string name="company">Company</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>

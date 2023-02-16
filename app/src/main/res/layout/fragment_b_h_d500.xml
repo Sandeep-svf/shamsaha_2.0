@@ -79,7 +79,6 @@
 
                 >
                 <com.google.android.material.textfield.TextInputLayout
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     >
@@ -120,8 +119,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
                     android:weightSum="10"
+                    android:layout_marginTop="10dp"
                     >
 
                     <com.hbb20.CountryCodePicker
@@ -172,50 +171,162 @@
                         ></com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    >
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/memo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:fitsSystemWindows="false"
-                        android:background="@drawable/custom_white_input_edit_text"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/bhu12"
-                        android:hint="@string/memo"
-                        ></com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/medical_quantity"
+                        android:textSize="@dimen/heading_text_18sp"
+                        android:fontFamily="@font/avenir_heavy"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        ></androidx.appcompat.widget.AppCompatTextView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/increment"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@drawable/custom_corner_incre"
+
+                        >
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_add_24"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+
+                            app:layout_constraintWidth_percent="0.65"
+                            app:layout_constraintHeight_percent="0.75"
+
+
+                            ></androidx.appcompat.widget.AppCompatImageView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/result"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+
+                        app:layout_constraintEnd_toStartOf="@+id/increment"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:text="1"
+                        android:textSize="@dimen/heading_text_20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center"
+
+
+                        ></androidx.appcompat.widget.AppCompatTextView>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/decrement"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:layout_constraintEnd_toStartOf="@+id/result"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@drawable/custom_corner_incre"
+
+                        >
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_minimize_24"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+
+                            app:layout_constraintWidth_percent="0.65"
+                            app:layout_constraintHeight_percent="0.75"
+
+
+                            ></androidx.appcompat.widget.AppCompatImageView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="14dp"
+                    android:elevation="14dp"
+                    android:layout_margin="5dp"
                     >
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/ammount"
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:fitsSystemWindows="false"
-                        android:background="@drawable/custom_white_input_edit_text"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/bhu12"
-                        android:hint="@string/amount"
-                        ></com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/avenir_heavy"
+                            android:text="500"
+
+                            android:textColor="@color/pink_theam"
+                            android:textSize="@dimen/heading_text_36sp"
+                            app:layout_constraintBottom_toTopOf="@+id/text2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed"></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/avenir_heavy"
+                            android:text="@string/bhd"
+
+                            android:textColor="@color/pink_theam"
+                            android:textSize="@dimen/heading_text_36sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/text1"></androidx.appcompat.widget.AppCompatTextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-
-
-
-
+                </androidx.cardview.widget.CardView>
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
