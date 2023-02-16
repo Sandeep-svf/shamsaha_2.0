@@ -53,15 +53,6 @@ public class ChatNowForm extends Fragment {
         selectedCountryName = binding.spinCountryCode.getSelectedCountryName().toString();
 
         // Handler...
-
-
-
-
-
-
-
-
-
         binding.chatNowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

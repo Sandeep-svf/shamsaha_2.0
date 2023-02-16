@@ -76,7 +76,7 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
             VolunteerHomeActivity volunteerHomeActivity = VolunteerHomeActivity.this;
             CURRENT_TAG = home;
             Vol_Home home = new Vol_Home();
-            androidx.fragment.app.FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentManager fragmentManager = getSupportFragmentManager();
             ((ConstraintLayout) findViewById(R.id.container_vol)).removeAllViews();
             androidx.fragment.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.add(R.id.container_vol, home, CURRENT_TAG);

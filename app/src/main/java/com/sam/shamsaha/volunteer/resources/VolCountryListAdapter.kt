@@ -1,15 +1,13 @@
 package com.sam.shamsaha.volunteer.resources
 
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
-import androidx.fragment.app.commit
 import android.content.Context
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.*
 
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -41,25 +39,25 @@ class VolCountryListAdapter( var context: Context, var volCountryLis: List<VolCo
     // not setting any image data to view
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
 
+        Log.e("test_sam_resources","A")
 
         with(holder){
             with(volCountryLis[position]){
                 binding.serviceName.text = this.serviceName
 
-                binding.itemView.setOnClickListener{ view ->
 
-                    var itemPosition : Long = getItemId(position)
+                holder.itemView.setOnClickListener(View.OnClickListener { view->
+                    var itemPosition : String = position.toString()
 
-                    /*toast("Hi there!")
-                    toast(R.string.message)
-                    longToast("Wow, such a duration")*/
+                /*    val myToast = Toast.makeText(context,"toast message :"+itemPosition,Toast.LENGTH_SHORT)
+                    myToast.setGravity(Gravity.LEFT,200,200)
+                    myToast.show()*/
+
+                    // changing fragment ...
                     replaceFragment(VolResourcesDetialsFragment())
 
-                    val myToast = Toast.makeText(context,"toast message :"+itemPosition,Toast.LENGTH_SHORT)
-                    myToast.setGravity(Gravity.LEFT,200,200)
-                    myToast.show()
 
-                }
+                })
 
             }
 
