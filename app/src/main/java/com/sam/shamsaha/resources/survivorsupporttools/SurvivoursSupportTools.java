@@ -31,6 +31,7 @@ public class SurvivoursSupportTools extends Fragment {
         binding.rcvSst.setLayoutManager(linearLayoutManager);
         ResourcesDetailsAdapter obj = new ResourcesDetailsAdapter(getActivity());
         binding.rcvSst.setAdapter(obj);
+        // dsfkjsjdfjkl
 
         return view;
     }
