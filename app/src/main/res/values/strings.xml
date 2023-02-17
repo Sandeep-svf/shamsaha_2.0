@@ -120,6 +120,10 @@
     <string name="memo">Memo</string>
     <string name="amount">Amount</string>
     <string name="company">Company</string>
+    <string name="intrest_inquiry">Interests/ inquiry</string>
+    <string name="upload_cv">Upload CV</string>
+    <string name="cancel">Cancel</string>
+    <string name="hospital">Hospital</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>

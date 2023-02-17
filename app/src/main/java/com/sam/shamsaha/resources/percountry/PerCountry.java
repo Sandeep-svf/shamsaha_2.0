@@ -13,6 +13,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import com.sam.shamsaha.R;
+import com.sam.shamsaha.resources.percountry.adapter.PerCountryAdapter;
 
 
 public class PerCountry extends Fragment {

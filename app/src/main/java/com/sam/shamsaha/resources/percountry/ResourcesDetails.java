@@ -1,4 +1,4 @@
-package com.sam.shamsaha.resources.survivorsupporttools;
+package com.sam.shamsaha.resources.percountry;
 
 import android.os.Bundle;
 
@@ -9,29 +9,33 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.sam.shamsaha.R;
-import com.sam.shamsaha.databinding.FragmentSurvivoursSupportToolsBinding;
+import com.sam.shamsaha.databinding.FragmentResourcesDetailsBinding;
+import com.sam.shamsaha.resources.percountry.adapter.PerCountryAdapter;
 import com.sam.shamsaha.resources.percountry.adapter.ResourcesDetailsAdapter;
 
 
-public class SurvivoursSupportTools extends Fragment {
+public class ResourcesDetails extends Fragment {
 
 
-    FragmentSurvivoursSupportToolsBinding binding;
+    FragmentResourcesDetailsBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentSurvivoursSupportToolsBinding.inflate(inflater,container,false);
+        binding = FragmentResourcesDetailsBinding.inflate(inflater,container,false);
         View view = binding.getRoot();
 
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL,false);
-        binding.rcvSst.setLayoutManager(linearLayoutManager);
+        binding.rcvResourcesDetials.setLayoutManager(linearLayoutManager);
         ResourcesDetailsAdapter obj = new ResourcesDetailsAdapter(getActivity());
-        binding.rcvSst.setAdapter(obj);
+        binding.rcvResourcesDetials.setAdapter(obj);
 
-        return view;
+
+
+
+
+        return  view;
     }
 }

@@ -10,10 +10,12 @@
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/drawable/custom_button.xml" value="0.1814814814814815" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/drawable/custom_button_black.xml" value="0.2212962962962963" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/drawable/custom_button_pick.xml" value="0.2212962962962963" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/drawable/custom_card_bg.xml" value="0.21574074074074073" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/drawable/custom_corner_incre.xml" value="0.21851851851851853" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/drawable/custom_corners_layout.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/drawable/custom_edit_text.xml" value="0.2212962962962963" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/drawable/custom_pink_corner_bg.xml" value="0.21851851851851853" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/drawable/custom_upper_radious.xml" value="0.21574074074074073" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/drawable/custom_white_input_edit_text.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.2212962962962963" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/drawable/upper_side_custom_background.xml" value="0.18425925925925926" />
@@ -51,6 +53,7 @@
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/fragment_lock_app.xml" value="0.25" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/fragment_medical.xml" value="0.25" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/fragment_per_country.xml" value="0.209375" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/fragment_resources_details.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/fragment_slideshow.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/fragment_sponsor.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/fragment_survivours_support_tools.xml" value="0.209375" />
@@ -70,6 +73,7 @@
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/menu_vol.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/nav_header_vol_home.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/per_country_xml.xml" value="0.22270742358078602" />
+        <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/resources_view_holder.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/single_item.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/style.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/layout/terms.xml" value="0.209375" />

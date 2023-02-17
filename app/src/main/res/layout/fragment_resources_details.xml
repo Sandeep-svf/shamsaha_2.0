@@ -8,20 +8,32 @@
     tools:context=".resources.percountry.PerCountry">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/bhu1"
+        android:id="@+id/heading"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/survivor_support_tools"
+        android:text="@string/resources"
         android:gravity="center"
         android:textSize="30dp"
         android:textColor="@color/white"
         ></androidx.appcompat.widget.AppCompatTextView>
 
-
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bhu1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading"
+        android:text="@string/hospital"
+        android:gravity="center"
+        android:textSize="@dimen/heading_text_18sp"
+        android:textColor="@color/white"
+        ></androidx.appcompat.widget.AppCompatTextView>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,7 +52,7 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcv_sst"
+            android:id="@+id/rcv_resources_detials"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="25dp"
