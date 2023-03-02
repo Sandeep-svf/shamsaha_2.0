@@ -9,6 +9,7 @@
     <string name="resource">Resources</string>
     <string name="per_country">Per Country</string>
     <string name="survivor_support_tools">Survivor Support Tools</string>
+    <string name="survivor_support_tools2">Survivor Support \nTools</string>
     <string name="events_media"><![CDATA[Events & Media]]></string>
     <string name="contect_us">Contact Us</string>
     <string name="lock_app">Lock App</string>
@@ -124,6 +125,11 @@
     <string name="upload_cv">Upload CV</string>
     <string name="cancel">Cancel</string>
     <string name="hospital">Hospital</string>
+    <string name="indentifying_abouse">Identifying \nabuse</string>
+    <string name="welcome_to_the_shamsha_application">Welcome to the Shamsaha application!</string>
+    <string name="free">Free</string>
+    <string name="view_event">View Event</string>
+    <string name="description">Description</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>

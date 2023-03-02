@@ -3,6 +3,7 @@ package com.sam.shamsaha.resources.survivorsupporttools;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
@@ -12,12 +13,14 @@ import android.view.ViewGroup;
 import com.sam.shamsaha.R;
 import com.sam.shamsaha.databinding.FragmentSurvivoursSupportToolsBinding;
 import com.sam.shamsaha.resources.percountry.adapter.ResourcesDetailsAdapter;
+import com.sam.shamsaha.resources.survivorsupporttools.adapter.SSTAdaptor;
 
 
 public class SurvivoursSupportTools extends Fragment {
 
 
     FragmentSurvivoursSupportToolsBinding binding;
+    private int numberOfColumns = 2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,11 +30,11 @@ public class SurvivoursSupportTools extends Fragment {
         View view = binding.getRoot();
 
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL,false);
-        binding.rcvSst.setLayoutManager(linearLayoutManager);
-        ResourcesDetailsAdapter obj = new ResourcesDetailsAdapter(getActivity());
-        binding.rcvSst.setAdapter(obj);
-        // dsfkjsjdfjkl
+        binding.rcvSst.setLayoutManager(new GridLayoutManager(getActivity(), numberOfColumns));
+        SSTAdaptor  sstAdaptor = new SSTAdaptor(getActivity());
+        binding.rcvSst.setAdapter(sstAdaptor);
+
+
 
         return view;
     }

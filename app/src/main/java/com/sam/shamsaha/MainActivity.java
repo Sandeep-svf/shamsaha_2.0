@@ -5,6 +5,8 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -34,10 +36,12 @@ import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.sam.shamsaha.aboutshamsaha.AboutShamsaha;
 import com.sam.shamsaha.contactus.ContactUs;
+import com.sam.shamsaha.eventsmedia.EventMedia;
 import com.sam.shamsaha.getinvolved.GetInvolved;
 import com.sam.shamsaha.home.home;
 import com.sam.shamsaha.lockapp.LockApp;
 import com.sam.shamsaha.resources.percountry.PerCountry;
+import com.sam.shamsaha.resources.survivorsupporttools.SurvivoursSupportTools;
 import com.sam.shamsaha.utility.Splash2Activity;
 import com.sam.shamsaha.utility.SplashActivity;
 import com.sam.shamsaha.utility.StaticKey;
@@ -286,12 +290,7 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
                 CURRENT_TAG = "get_involved";
 
                 AboutShamsaha aboutShamsaha = new AboutShamsaha();
-                androidx.fragment.app.FragmentManager fragmentManager123121212 = getSupportFragmentManager();
-                ((ConstraintLayout) findViewById(R.id.container)).removeAllViews();
-                androidx.fragment.app.FragmentTransaction fragmentTransaction123121212 = fragmentManager123121212.beginTransaction();
-                fragmentTransaction123121212.add(R.id.container, aboutShamsaha, CURRENT_TAG);
-                fragmentTransaction123121212.commit();
-                getSlidingMenu().toggle();
+                replace_fragment(aboutShamsaha);
                 break;
             case R.id.get_involved:
 
@@ -299,12 +298,7 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
                 CURRENT_TAG = "get_involved";
 
                 GetInvolved getInvolved = new GetInvolved();
-                androidx.fragment.app.FragmentManager fragmentManager12312121212 = getSupportFragmentManager();
-                ((ConstraintLayout) findViewById(R.id.container)).removeAllViews();
-                androidx.fragment.app.FragmentTransaction fragmentTransaction12312121212 = fragmentManager12312121212.beginTransaction();
-                fragmentTransaction12312121212.replace(R.id.container, getInvolved, CURRENT_TAG);
-                fragmentTransaction12312121212.commit();
-                getSlidingMenu().toggle();
+                replace_fragment(getInvolved);
                 break;
             case R.id.resource:
                 if(resourcesFlag){
@@ -323,39 +317,28 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
                 CURRENT_TAG = "perCountry";
 
                 PerCountry perCountry = new PerCountry();
-                androidx.fragment.app.FragmentManager fragmentManager12312 = getSupportFragmentManager();
-                ((ConstraintLayout) findViewById(R.id.container)).removeAllViews();
-                androidx.fragment.app.FragmentTransaction fragmentTransaction12312 = fragmentManager12312.beginTransaction();
-                fragmentTransaction12312.add(R.id.container, perCountry, CURRENT_TAG);
-                fragmentTransaction12312.commit();
-                getSlidingMenu().toggle();
+                replace_fragment(perCountry);
                 break;
             case R.id.survivor_support_tools:
+                SurvivoursSupportTools survivoursSupportTools = new SurvivoursSupportTools();
+                replace_fragment(survivoursSupportTools);
                 break;
             case R.id.events_media:
+                EventMedia eventMedia = new EventMedia();
+                replace_fragment(eventMedia);
                 break;
             case R.id.contact_us:
                 navItemIndex=6;
                 CURRENT_TAG = "contactUs";
                 ContactUs contactUs = new ContactUs();
-                androidx.fragment.app.FragmentManager fragmentManager123 = getSupportFragmentManager();
-                ((ConstraintLayout) findViewById(R.id.container)).removeAllViews();
-                androidx.fragment.app.FragmentTransaction fragmentTransaction123 = fragmentManager123.beginTransaction();
-                fragmentTransaction123.replace(R.id.container, contactUs, CURRENT_TAG);
-                fragmentTransaction123.commit();
-                getSlidingMenu().toggle();
+                replace_fragment(contactUs);
                 break;
             case R.id.lock_app:
                 navItemIndex=5;
                 CURRENT_TAG = "lock_app";
 
                 LockApp lockApp = new LockApp();
-                androidx.fragment.app.FragmentManager fragmentManager1231212121 = getSupportFragmentManager();
-                ((ConstraintLayout) findViewById(R.id.container)).removeAllViews();
-                androidx.fragment.app.FragmentTransaction fragmentTransaction1231212121 = fragmentManager1231212121.beginTransaction();
-                fragmentTransaction1231212121.replace(R.id.container, lockApp, CURRENT_TAG);
-                fragmentTransaction1231212121.commit();
-                getSlidingMenu().toggle();
+                replace_fragment(lockApp);
                 break;
             case R.id.chat_now:
 
@@ -368,12 +351,7 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
                 navItemIndex=6;
                 CURRENT_TAG = "lock_app";
                 VolunteerLogin volunteerLogin = new VolunteerLogin();
-                androidx.fragment.app.FragmentManager fragmentManager12 = getSupportFragmentManager();
-                ((ConstraintLayout) findViewById(R.id.container)).removeAllViews();
-                androidx.fragment.app.FragmentTransaction fragmentTransaction12 = fragmentManager12.beginTransaction();
-                fragmentTransaction12.replace(R.id.container, volunteerLogin, CURRENT_TAG);
-                fragmentTransaction12.commit();
-                getSlidingMenu().toggle();
+                replace_fragment(volunteerLogin);
                 break;
             case R.id.terms_conditions:
 
@@ -470,6 +448,16 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
 
         }
     }
+
+    private void replace_fragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        ((ConstraintLayout) findViewById(R.id.container)).removeAllViews();
+        androidx.fragment.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.container, fragment, CURRENT_TAG);
+        fragmentTransaction.commit();
+        getSlidingMenu().toggle();
+    }
+
     @Override
     public void onBackPressed() {
 

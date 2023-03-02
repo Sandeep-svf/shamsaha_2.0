@@ -81,6 +81,21 @@
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/menu/activity_main_drawer.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AndroidStudioProjects/shamsaha/app/src/main/res/menu/vol_home.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.209375" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/drawable/circleindicator_round.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/drawable/circleindicator_round_unselected.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/case_list_view_holder.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_case_report.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_contact_us.xml" value="0.14907407407407408" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_event_details.xml" value="0.22" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_event_details2.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_event_media.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_survivours_support_tools.xml" value="0.25" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol__home.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol_resources.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_volunteer_login.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/resources_view_holder.xml" value="0.17962962962962964" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/run_wizard_view_holder.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/sstv_view_holder.xml" value="0.20520833333333333" />
       </map>
     </option>
   </component>
@@ -89,5 +104,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
   </component>
 </project>

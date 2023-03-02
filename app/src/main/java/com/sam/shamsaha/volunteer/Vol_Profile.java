@@ -26,9 +26,6 @@ public class Vol_Profile extends Fragment {
 
 
     AppCompatImageView contact_arrow_down, address_arrow_down,language_arrow_down,date_arrow_down;
-
-
-
     AppCompatImageView edit_vol_profile_image;
 
 

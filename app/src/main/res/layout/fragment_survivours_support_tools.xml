@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/survivor_support_tools"
+        android:text="@string/survivor_support_tools2"
         android:gravity="center"
         android:textSize="30dp"
         android:textColor="@color/white"
@@ -24,9 +24,10 @@
 
 
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
+
         android:layout_height="0dp"
         android:background="@drawable/upper_side_custom_background"
         app:layout_constraintTop_toBottomOf="@+id/bhu1"
@@ -44,10 +45,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="25dp"
-
-
             app:layout_constraintWidth_percent="0.95"
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.87"
@@ -69,7 +67,7 @@
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintWidth_percent=".15"
         app:layout_constraintHeight_percent="0.089"
-        app:layout_constraintVertical_bias="0.95"
+        app:layout_constraintVertical_bias="0.08"
         app:layout_constraintHorizontal_bias="0.9"
         ></de.hdodenhof.circleimageview.CircleImageView>
 
