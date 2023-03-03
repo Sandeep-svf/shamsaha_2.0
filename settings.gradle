@@ -9,3 +9,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "shamsaha"
 include ':app'
+include ':MyFirstLib'

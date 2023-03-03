@@ -1,5 +1,7 @@
 package com.sam.shamsaha.eventsmedia;
 
+import android.annotation.SuppressLint;
+import android.content.res.Resources;
 import android.os.Bundle;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -11,10 +13,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sam.shamsaha.R;
 import com.sam.shamsaha.databinding.FragmentEventMediaBinding;
 import com.sam.shamsaha.databinding.FragmentVolunteerBinding;
+import com.sam.shamsaha.utility.StaticKey;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +28,10 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class EventMedia extends Fragment {
 
+    private String flag;
+
     FragmentEventMediaBinding binding;
     private RunWizardAdapter myadapter;
-    CircleIndicator banner_indicator;
     private TextView[] mdots;
 
 
@@ -37,12 +42,35 @@ public class EventMedia extends Fragment {
     int currentScrollDirection = 2;
     private int addDotNumber;
 
+
+    public EventMedia(String volunteerFlag) {
+       flag = volunteerFlag;
+    }
+
+
+    @SuppressLint("ResourceType")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentEventMediaBinding.inflate(inflater,container,false);
         View view = binding.getRoot();
+
+
+
+
+            if(flag.equals(StaticKey.VICTIM_FLAG)){
+                binding.eventMediaBakground.setBackgroundColor(getResources().getColor(R.color.pink_theam));
+                binding.viewpager.setBackgroundColor(getResources().getColor(R.color.pink_theam));
+               // binding.eventMediaBakground.setBackgroundResource(getResources().getColor(R.color.pink_theam));
+            }else if(flag.equals(StaticKey.VOLUNTEER_FLAG)){
+                binding.eventMediaBakground.setBackgroundColor(getResources().getColor(R.color.yellow_theam));
+                binding.viewpager.setBackgroundColor(getResources().getColor(R.color.yellow_theam));
+                //binding.eventMediaBakground.setBackgroundResource(getResources().getColor(R.color.yellow_theam));
+            }else{
+                Toast.makeText(getActivity(), "Something went wrong, while setting background resources.", Toast.LENGTH_SHORT).show();
+            }
+
 
         List<RunWizardListModel> runWizardListModelList = new ArrayList<>();
 

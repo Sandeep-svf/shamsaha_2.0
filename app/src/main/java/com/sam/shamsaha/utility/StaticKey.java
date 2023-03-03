@@ -12,4 +12,6 @@ public class StaticKey {
     public static final String KEY_USERNAME = "username";
     public static final String PREF_NAME = "ShamsahaTwilio";
     public static final String IS_LOGGED_IN = "IsLoggedIn";
+    public static final String VOLUNTEER_FLAG = "1";
+    public static final String VICTIM_FLAG = "0";
 }

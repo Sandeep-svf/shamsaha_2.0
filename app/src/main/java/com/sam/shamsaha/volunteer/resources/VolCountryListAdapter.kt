@@ -7,16 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.*
 
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sam.shamsaha.R
 import com.sam.shamsaha.databinding.SingleItemBinding
+import com.sam.shamsaha.eventsmedia.EventDetails
 import com.sam.shamsaha.utility.OnClickListener
+import com.sam.shamsaha.utility.UtilFun
 
-class VolCountryListAdapter( var context: Context, var volCountryLis: List<VolCountryListModel>,
-    ) : RecyclerView.Adapter<VolCountryListAdapter.CountryViewHolder>() {
+class VolCountryListAdapter(
+    var context: Context, var volCountryLis: List<VolCountryListModel>,
+) : RecyclerView.Adapter<VolCountryListAdapter.CountryViewHolder>() {
 
 
     // create an inner class with name ViewHolder
@@ -46,16 +50,13 @@ class VolCountryListAdapter( var context: Context, var volCountryLis: List<VolCo
                 binding.serviceName.text = this.serviceName
 
 
-                holder.itemView.setOnClickListener(View.OnClickListener { view->
+                holder.itemView.setOnClickListener(View.OnClickListener {it: View->
                     var itemPosition : String = position.toString()
 
-                /*    val myToast = Toast.makeText(context,"toast message :"+itemPosition,Toast.LENGTH_SHORT)
-                    myToast.setGravity(Gravity.LEFT,200,200)
-                    myToast.show()*/
-
                     // changing fragment ...
-                    replaceFragment(VolResourcesDetialsFragment())
-
+                    val activity =it.context as FragmentActivity
+                    val volResourcesFragment = VolResourcesDetialsFragment()
+                    UtilFun.replaceFragmentVol(activity,volResourcesFragment)
 
                 })
 
@@ -69,6 +70,9 @@ class VolCountryListAdapter( var context: Context, var volCountryLis: List<VolCo
         val transaction = fragment.childFragmentManager.beginTransaction()
         transaction.replace(R.id.container_vol, fragment)
         transaction.commit()
+
+
+
     }
 
 

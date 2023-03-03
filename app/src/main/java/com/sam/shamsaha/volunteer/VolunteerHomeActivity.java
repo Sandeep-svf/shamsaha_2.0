@@ -3,6 +3,7 @@ package com.sam.shamsaha.volunteer;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -19,7 +20,10 @@ import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.sam.shamsaha.MainActivity;
 import com.sam.shamsaha.R;
+import com.sam.shamsaha.eventsmedia.EventMedia;
 import com.sam.shamsaha.home.home;
+import com.sam.shamsaha.utility.StaticKey;
+import com.sam.shamsaha.volunteer.casereport.CaseReport;
 import com.sam.shamsaha.volunteer.dashboard.Vol_Home;
 import com.sam.shamsaha.volunteer.resources.VolResourcesFragment;
 import com.sam.shamsaha.volunteer.resources.VolResourcesKotlin;
@@ -173,38 +177,37 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
                 break;
 
             case R.id.my_profile_layout_vol:
-
-
                 Vol_Profile vol_profile = new Vol_Profile();
-                FragmentManager fragmentManager12312121212 = getSupportFragmentManager();
-                ((ConstraintLayout) findViewById(R.id.container_vol)).removeAllViews();
-                FragmentTransaction fragmentTransaction12312121212 = fragmentManager12312121212.beginTransaction();
-                fragmentTransaction12312121212.replace(R.id.container_vol, vol_profile, CURRENT_TAG);
-                fragmentTransaction12312121212.commit();
-                getSlidingMenu().toggle();
-
-
+                replace_fragment(vol_profile);
                 break;
 
 
-
             case R.id.resourse_layout_vol:
-
                 VolResourcesFragment volResourcesKotlin = new VolResourcesFragment();
+                replace_fragment(volResourcesKotlin);
+                break;
 
-                FragmentManager fragmentManagerVolResources = getSupportFragmentManager();
-                ((ConstraintLayout) findViewById(R.id.container_vol)).removeAllViews();
-                FragmentTransaction fragmentTransactionVolResources = fragmentManagerVolResources.beginTransaction();
-                fragmentTransactionVolResources.replace(R.id.container_vol,volResourcesKotlin,CURRENT_TAG);
-                fragmentTransactionVolResources.commit();
-                getSlidingMenu().toggle();
-
-
+            case R.id.event_media_layout:
+                EventMedia eventMedia = new EventMedia(StaticKey.VOLUNTEER_FLAG);
+                replace_fragment(eventMedia);
+                break;
 
 
+            case R.id.case_report_layout_vol:
+                CaseReport caseReport = new CaseReport();
+                replace_fragment(caseReport);
                 break;
 
 
         }
     }
+    private void replace_fragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        ((ConstraintLayout) findViewById(R.id.container_vol)).removeAllViews();
+        androidx.fragment.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.container_vol, fragment, CURRENT_TAG);
+        fragmentTransaction.commit();
+        getSlidingMenu().toggle();
+    }
+
 }

@@ -130,6 +130,8 @@
     <string name="free">Free</string>
     <string name="view_event">View Event</string>
     <string name="description">Description</string>
+    <string name="short_form">Short Form</string>
+    <string name="long_form">Long Form</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>

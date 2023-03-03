@@ -324,7 +324,7 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
                 replace_fragment(survivoursSupportTools);
                 break;
             case R.id.events_media:
-                EventMedia eventMedia = new EventMedia();
+                EventMedia eventMedia = new EventMedia(StaticKey.VICTIM_FLAG);
                 replace_fragment(eventMedia);
                 break;
             case R.id.contact_us:
