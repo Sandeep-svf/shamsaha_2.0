@@ -20,7 +20,20 @@
         >
 
 
-        <androidx.appcompat.widget.AppCompatButton
+        <WebView
+            android:id="@+id/forms_web_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintHeight_percent="0.95"
+            app:layout_constraintWidth_percent="0.95"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            ></WebView>
+
+       <!-- <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/short_form"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -50,10 +63,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.385"
-            app:layout_constraintWidth_percent="0.75"></androidx.appcompat.widget.AppCompatButton>
+            app:layout_constraintWidth_percent="0.75"></androidx.appcompat.widget.AppCompatButton>-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 
     <androidx.appcompat.widget.AppCompatTextView

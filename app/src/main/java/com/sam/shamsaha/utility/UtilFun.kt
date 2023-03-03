@@ -17,6 +17,14 @@ class UtilFun {
                 .commit()
         }
 
+
+        fun replaceFragmentVictim(activity: FragmentActivity, fragment: Fragment){
+            activity.supportFragmentManager.beginTransaction()
+                .replace(R.id.container,fragment)
+                .addToBackStack(null)
+                .commit()
+        }
+
     }
 
 }
