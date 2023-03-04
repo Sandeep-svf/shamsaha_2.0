@@ -23,27 +23,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shamsaha">
         <activity
+            android:name=".pickimagecameragalary.PickImagelocalActivity"
+            android:exported="true" />
+        <activity
             android:name=".chatnow.VictimVolChatActivity"
             android:exported="true" />
         <activity
             android:name=".retrofit.ApiTestiongActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".volunteer.resources.VolResourcesKotlin"
             android:exported="true" />
         <activity
             android:name=".volunteer.VolunteerHomeActivity"
-            android:exported="true">
-
-
-
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".utility.Splash2Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
