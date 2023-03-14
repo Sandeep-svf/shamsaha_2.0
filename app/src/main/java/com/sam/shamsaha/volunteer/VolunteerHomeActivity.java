@@ -7,12 +7,21 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
+import android.webkit.WebView;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -25,13 +34,15 @@ import com.sam.shamsaha.home.home;
 import com.sam.shamsaha.utility.StaticKey;
 import com.sam.shamsaha.volunteer.casereport.CaseReport;
 import com.sam.shamsaha.volunteer.dashboard.Vol_Home;
+import com.sam.shamsaha.volunteer.inpersonbackup.InPersonBackup;
 import com.sam.shamsaha.volunteer.resources.VolResourcesFragment;
 import com.sam.shamsaha.volunteer.resources.VolResourcesKotlin;
+import com.sam.shamsaha.volunteer.swiftswaprequest.SwiftSwapRequest;
 
 public class VolunteerHomeActivity extends SlidingFragmentActivity implements View.OnClickListener {
 
     RelativeLayout dashboard_layout_vol, my_profile_layout_vol, my_shift_layout_vol, vol_calander_layout_vol, swift_swap_layout_vol,
-            on_duity_backup_layout_vol, language_backup_layout_vol, inperson_backup_layout_vol, provide_backup_layout_vol, case_report_layout_vol, resourse_layout_vol, event_media_layout, logout_layout, setting_layout;
+            on_duity_backup_layout_vol, client_service_layout_vol,language_backup_layout_vol, inperson_backup_layout_vol, provide_backup_layout_vol, case_report_layout_vol, resourse_layout_vol, event_media_layout, logout_layout, setting_layout;
 
     AppCompatImageView btnMenu;
     private static final String TAG_DASH_BOARD = "dashboard";
@@ -39,6 +50,7 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
     private int navItemIndex;
     private static final String home = "home";
     ConstraintLayout container_vol;
+    Dialog dialog;
 
     private Boolean languageBackupFlag = true;
 
@@ -97,6 +109,7 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
 
         btnMenu = (AppCompatImageView) findViewById(R.id.btnMenu);
         my_profile_layout_vol = (RelativeLayout) findViewById(R.id.my_profile_layout_vol);
+        client_service_layout_vol = (RelativeLayout) findViewById(R.id.client_service_layout_vol);
         my_shift_layout_vol = (RelativeLayout) findViewById(R.id.my_shift_layout_vol);
         dashboard_layout_vol = (RelativeLayout) findViewById(R.id.dashboard_layout_vol);
         vol_calander_layout_vol = (RelativeLayout) findViewById(R.id.vol_calander_layout_vol);
@@ -128,6 +141,7 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
     private void inits_menu() {
 
         btnMenu.setOnClickListener(this::onClick);
+        client_service_layout_vol.setOnClickListener(this::onClick);
         dashboard_layout_vol.setOnClickListener(this::onClick);
         my_profile_layout_vol.setOnClickListener(this::onClick);
         my_shift_layout_vol.setOnClickListener(this::onClick);
@@ -176,6 +190,29 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
                 }
                 break;
 
+
+            case R.id.client_service_layout_vol:
+
+                openDialog(VolunteerHomeActivity.this);
+                break;
+
+            case R.id.swift_swap_layout_vol:
+                SwiftSwapRequest swiftSwapRequest = new SwiftSwapRequest();
+                replace_fragment(swiftSwapRequest);
+                break;
+
+            case R.id.provide_backup_layout_vol:
+                InPersonBackup inPersonBackup = new InPersonBackup();
+                replace_fragment(inPersonBackup);
+                break;
+
+            case R.id.language_backup_layout_vol:
+                // popup
+                openDialog(VolunteerHomeActivity.this,"1");
+                break;
+            case R.id.inperson_backup_layout_vol:
+                openDialog(VolunteerHomeActivity.this,"2");
+                break;
             case R.id.my_profile_layout_vol:
                 Vol_Profile vol_profile = new Vol_Profile();
                 replace_fragment(vol_profile);
@@ -209,5 +246,54 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
         fragmentTransaction.commit();
         getSlidingMenu().toggle();
     }
+    public void openDialog(Context context, String type) {
+        dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(false);
 
+        if(type.equals("1")) dialog.setContentView(R.layout.terms2);
+        else  dialog.setContentView(R.layout.terms2backup);
+        ImageView i = dialog.findViewById(R.id.closeBtn2);
+        ProgressBar progressBar = dialog.findViewById(R.id.progressBar6);
+        /*WebView webView = dialog.findViewById(R.id.webViewContainer);
+        progressBar.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.GONE);*/
+
+        //   hitApi(context,webView,progressBar);
+        i.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+        dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().getAttributes().windowAnimations = R.anim.fade_in;
+    }
+    public void openDialog(Context context) {
+        dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(false);
+
+       dialog.setContentView(R.layout.terms3);
+
+        ImageView i = dialog.findViewById(R.id.closeBtn2);
+        ProgressBar progressBar = dialog.findViewById(R.id.progressBar6);
+        /*WebView webView = dialog.findViewById(R.id.webViewContainer);
+        progressBar.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.GONE);*/
+
+        //   hitApi(context,webView,progressBar);
+        i.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+        dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().getAttributes().windowAnimations = R.anim.fade_in;
+    }
 }

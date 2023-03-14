@@ -93,11 +93,18 @@
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_event_details.xml" value="0.22" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_event_details2.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_event_media.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_in_person_backup.xml" value="0.209375" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_language_backup.xml" value="0.209375" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_my_shift.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_survivours_support_tools.xml" value="0.25" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_swift_swap_request.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol__home.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol__profile.xml" value="0.175" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol_resources.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol_resources_detials.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_volunteer_login.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/menu.xml" value="0.22" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/menu_vol.xml" value="0.33" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/resources_view_holder.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/run_wizard_view_holder.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/short_form_1.xml" value="0.20520833333333333" />
@@ -105,6 +112,10 @@
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/short_form_3.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/short_form_4.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/sstv_view_holder.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/terms.xml" value="0.22" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/terms2.xml" value="0.209375" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/terms2backup.xml" value="0.209375" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/terms3.xml" value="0.33" />
       </map>
     </option>
   </component>
@@ -117,7 +128,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.22" />
+        <option name="scale" value="1.0" />
       </ProjectState>
     </option>
   </component>

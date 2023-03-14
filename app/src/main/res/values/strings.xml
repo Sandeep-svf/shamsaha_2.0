@@ -132,6 +132,14 @@
     <string name="description">Description</string>
     <string name="short_form">Short Form</string>
     <string name="long_form">Long Form</string>
+    <string name="case_id">Case ID:</string>
+    <string name="language_support">Language Support</string>
+    <string name="send">Send</string>
+    <string name="backup_support">Backup Support</string>
+    <string name="supporet_for">Support For:</string>
+    <string name="outstanding_request">Outstanding Requests</string>
+    <string name="shift_request_list">Shift Request List</string>
+    <string name="service">Service</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>

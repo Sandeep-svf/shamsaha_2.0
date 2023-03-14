@@ -18,6 +18,7 @@ import com.sam.shamsaha.R;
 import com.sam.shamsaha.eventsmedia.EventDetails;
 import com.sam.shamsaha.volunteer.adapter.AnnouncementListAdapter;
 import com.sam.shamsaha.volunteer.casereport.CaseReport;
+import com.sam.shamsaha.volunteer.resources.VolResourcesFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,7 +29,7 @@ public class Vol_Home extends Fragment {
 
 
     RecyclerView rcv_announcement_list;
-    ConstraintLayout case_report_layout_vol_dashboard;
+    ConstraintLayout case_report_layout_vol_dashboard,vol_home_resources;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,6 +47,14 @@ public class Vol_Home extends Fragment {
         rcv_announcement_list.setAdapter(announcementListAdapter);
 
 
+        vol_home_resources.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                VolResourcesFragment volResourcesFragment = new VolResourcesFragment();
+                replace_fragment(volResourcesFragment);
+            }
+        });
+
         case_report_layout_vol_dashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,6 +64,7 @@ public class Vol_Home extends Fragment {
 
             }
         });
+
 
 
         return view;
@@ -68,6 +78,7 @@ public class Vol_Home extends Fragment {
 
     private void intis(View view) {
         rcv_announcement_list = view.findViewById(R.id.rcv_announcement_list);
+        vol_home_resources = view.findViewById(R.id.vol_home_resources);
         case_report_layout_vol_dashboard = view.findViewById(R.id.case_report_layout_vol_dashboard);
     }
 }
