@@ -35,6 +35,7 @@ import com.sam.shamsaha.utility.StaticKey;
 import com.sam.shamsaha.volunteer.casereport.CaseReport;
 import com.sam.shamsaha.volunteer.dashboard.Vol_Home;
 import com.sam.shamsaha.volunteer.inpersonbackup.InPersonBackup;
+import com.sam.shamsaha.volunteer.myshift.MyShift;
 import com.sam.shamsaha.volunteer.resources.VolResourcesFragment;
 import com.sam.shamsaha.volunteer.resources.VolResourcesKotlin;
 import com.sam.shamsaha.volunteer.swiftswaprequest.SwiftSwapRequest;
@@ -190,6 +191,12 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
                 }
                 break;
 
+
+            case R.id.my_shift_layout_vol:
+                MyShift myShift = new MyShift();
+                replace_fragment(myShift);
+
+                break;
 
             case R.id.client_service_layout_vol:
 
