@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/resources"
+        android:text="@string/lock_app"
         android:gravity="center"
         android:textSize="30dp"
         android:textColor="@color/white"
