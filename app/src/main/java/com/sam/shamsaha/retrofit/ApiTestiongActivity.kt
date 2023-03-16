@@ -24,7 +24,7 @@ class ApiTestiongActivity : AppCompatActivity() {
         val quotesApi = ApiClient.getInstance().create(Apis::class.java)
         // launching a new coroutine
         GlobalScope.launch {
-            val result = quotesApi.getQuotes()
+            val result = quotesApi.getQuotes("name")
             if(result != null) {
                 // Checking the results
                 Log.d("ayush: ", result.body().toString())

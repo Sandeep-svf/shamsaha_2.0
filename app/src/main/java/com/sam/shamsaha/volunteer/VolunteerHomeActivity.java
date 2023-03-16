@@ -39,6 +39,7 @@ import com.sam.shamsaha.volunteer.myshift.MyShift;
 import com.sam.shamsaha.volunteer.resources.VolResourcesFragment;
 import com.sam.shamsaha.volunteer.resources.VolResourcesKotlin;
 import com.sam.shamsaha.volunteer.swiftswaprequest.SwiftSwapRequest;
+import com.sam.shamsaha.volunteer.volcalendar.VolCalendar;
 
 public class VolunteerHomeActivity extends SlidingFragmentActivity implements View.OnClickListener {
 
@@ -206,6 +207,11 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
             case R.id.swift_swap_layout_vol:
                 SwiftSwapRequest swiftSwapRequest = new SwiftSwapRequest();
                 replace_fragment(swiftSwapRequest);
+                break;
+
+            case R.id.vol_calander_layout_vol:
+                VolCalendar volCalendar = new VolCalendar();
+                replace_fragment(volCalendar);
                 break;
 
             case R.id.provide_backup_layout_vol:

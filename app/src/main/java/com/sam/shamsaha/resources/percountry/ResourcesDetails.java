@@ -33,6 +33,14 @@ public class ResourcesDetails extends Fragment {
         binding.rcvResourcesDetials.setAdapter(obj);
 
 
+        binding.sos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+
 
 
 

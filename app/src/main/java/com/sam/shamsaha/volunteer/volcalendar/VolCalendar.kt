@@ -1,4 +1,4 @@
-package com.sam.shamsaha.volunteer.myshift
+package com.sam.shamsaha.volunteer.volcalendar
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,28 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.sam.shamsaha.R
-import com.sam.shamsaha.databinding.FragmentMyShiftBinding
+import com.sam.shamsaha.databinding.FragmentVolCalendarBinding
 
 
-class MyShift : Fragment() {
+class VolCalendar : Fragment() {
 
-
-    lateinit var binding : FragmentMyShiftBinding
+    lateinit var binding: FragmentVolCalendarBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentMyShiftBinding.inflate(inflater,container,false)
+       binding = FragmentVolCalendarBinding.inflate(inflater,container,false)
         val view : View = binding.root
-
-        // recyler view
-
-
-
-
-
 
 
 
