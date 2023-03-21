@@ -19,11 +19,8 @@ import java.util.ArrayList
 class VolCalendar : Fragment() {
 
     lateinit var binding: FragmentVolCalendarBinding
-    private var myadapter: RunWizardAdapter? = null
-
+    private var myadapter: RunWizardAdapterShiftLog? = null
     private lateinit var volShitLogList : List<RunWizardListModelShiftLog>
-
-
 
     // on page scroll in view pager
     var SCROLLING_RIGHT = 0
@@ -44,20 +41,20 @@ class VolCalendar : Fragment() {
 
         // add data in model manually
         volShitLogList = listOf(
-            RunWizardListModelShiftLog("21 Dec 2022", "English"),
-            RunWizardListModelShiftLog("11 March 2023", "Arbic"),
-            RunWizardListModelShiftLog("31 Jan 2019", "Hindi"),
-            RunWizardListModelShiftLog("07 May 2018", "English"),
-            RunWizardListModelShiftLog("14 March 2001", "arbic"))
+            RunWizardListModelShiftLog("21 Dec 2022", "English","6 AM 6 PM","Sam"),
+            RunWizardListModelShiftLog("11 March 2023", "Arbic","7 AM 7 PM","Ankur"),
+            RunWizardListModelShiftLog("31 Jan 2019", "Hindi","12 PM 12 AM","Master"),
+            RunWizardListModelShiftLog("07 May 2018", "English","5 AM 5 PM","Bhanu"),
+            RunWizardListModelShiftLog("14 March 2001", "arbic","4 AM 4 PM","Aarav"))
 
 
 
-        myadapter = RunWizardAdapter(activity, volShitLogList)
+        myadapter = RunWizardAdapterShiftLog(requireContext(), volShitLogList)
         binding.viewpager.adapter = myadapter
         binding.bannerIndicator.setViewPager(binding.viewpager)
         addDotNumber = volShitLogList.size
         binding.viewpager.addOnPageChangeListener(viewlistener)
-        binding.bannerIndicator.setViewPager(binding.viewpager);
+
 
 
 
