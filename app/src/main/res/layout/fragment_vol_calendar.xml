@@ -105,12 +105,18 @@
             android:layout_width="0dp"
             app:layout_constraintWidth_percent="0.89"
             android:layout_height="0dp"
-            app:layout_constraintHeight_percent="0.9"
 
+            app:layout_constraintHeight_percent="0.825"
+
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+            app:layout_constraintStart_toStartOf="parent">
 
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -195,16 +201,34 @@
 `
 
                 <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/view_pager_val_cal"
+                    android:id="@+id/viewpager"
                     android:layout_width="match_parent"
                     android:layout_height="210dp"
                     ></androidx.viewpager.widget.ViewPager>
 
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/banner_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    app:ci_animator="@animator/alpha"
+                    app:ci_drawable="@drawable/circleindicator_round"
+                    app:ci_drawable_unselected="@drawable/circleindicator_round_unselected"
+                    app:ci_height="8dp"
+                    app:ci_width="8dp"
 
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
-
+            </ScrollView>
         </androidx.core.widget.NestedScrollView>
 
 
