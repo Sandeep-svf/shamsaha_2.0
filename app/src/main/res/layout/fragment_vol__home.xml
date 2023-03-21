@@ -47,6 +47,8 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/nhu"
@@ -119,6 +121,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:text="Vol Name"
+                android:id="@+id/vol_name"
                 android:textStyle="bold"
                 android:fontFamily="@font/avenir_heavy"
                 android:textSize="@dimen/heading_text_18sp"

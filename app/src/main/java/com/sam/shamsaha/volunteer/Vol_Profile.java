@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -27,6 +28,7 @@ public class Vol_Profile extends Fragment {
 
     AppCompatImageView contact_arrow_down, address_arrow_down,language_arrow_down,date_arrow_down;
     AppCompatImageView edit_vol_profile_image;
+    AppCompatTextView vol_name;
 
 
     LinearLayoutCompat contact_hidden_layout,address_hidden_layout,language_hidden_layout,date_hidden_layout;
@@ -42,6 +44,8 @@ public class Vol_Profile extends Fragment {
         View view = inflater.inflate(R.layout.fragment_vol__profile, container, false);
 
         intis(view);
+
+
 
 
 
@@ -144,6 +148,7 @@ public class Vol_Profile extends Fragment {
     }
 
     private void intis(View view) {
+        vol_name = view.findViewById(R.id.vol_name);
         edit_vol_profile_image = view.findViewById(R.id.edit_vol_profile_image);
         date_arrow_down = view.findViewById(R.id.date_arrow_down);
         contact_arrow_down = view.findViewById(R.id.contact_arrow_down);

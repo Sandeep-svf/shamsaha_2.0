@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
 import com.sam.shamsaha.R
 import com.sam.shamsaha.databinding.FragmentVolCalendarBinding
@@ -39,13 +40,27 @@ class VolCalendar : Fragment() {
         val view : View = binding.root
         // add data in model manually
 
+
+        binding.switchCompat.setOnClickListener(View.OnClickListener {
+            if(binding.switchCompat.isChecked){
+                Toast.makeText(requireContext(),"check",Toast.LENGTH_SHORT)
+
+            }else if(!binding.switchCompat.isChecked){
+                Toast.makeText(requireContext(),"uncheck",Toast.LENGTH_SHORT)
+
+            }else{
+                Toast.makeText(requireContext(),"Something went wrong",Toast.LENGTH_SHORT)
+            }
+        })
+
         // add data in model manually
         volShitLogList = listOf(
             RunWizardListModelShiftLog("21 Dec 2022", "English","6 AM 6 PM","Sam"),
             RunWizardListModelShiftLog("11 March 2023", "Arbic","7 AM 7 PM","Ankur"),
             RunWizardListModelShiftLog("31 Jan 2019", "Hindi","12 PM 12 AM","Master"),
             RunWizardListModelShiftLog("07 May 2018", "English","5 AM 5 PM","Bhanu"),
-            RunWizardListModelShiftLog("14 March 2001", "arbic","4 AM 4 PM","Aarav"))
+            RunWizardListModelShiftLog("14 March 2001", "arbic","4 AM 4 PM","Aarav"),
+            RunWizardListModelShiftLog("07 May 2018", "English","5 AM 5 PM","Bhanu"))
 
 
 
