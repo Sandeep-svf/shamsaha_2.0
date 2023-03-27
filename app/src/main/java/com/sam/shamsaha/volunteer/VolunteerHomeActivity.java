@@ -186,8 +186,8 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
             case R.id.dashboard_layout_vol:
                 navItemIndex=1;
                 CURRENT_TAG = "get_involved";
-                Intent intent2 = new Intent(VolunteerHomeActivity.this, VolunteerHomeActivity.class);
-                startActivity(intent2);
+                Intent intent24 = new Intent(VolunteerHomeActivity.this, VolunteerHomeActivity.class);
+                startActivity(intent24);
                 break;
             case R.id.on_duity_backup_layout_vol:
 
@@ -219,6 +219,8 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
 
 
             case R.id.setting_layout:
+
+
                 openDialogSettings(VolunteerHomeActivity.this);
 
                 break;
@@ -334,6 +336,8 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
         dialog.getWindow().getAttributes().windowAnimations = R.anim.fade_in;
     }
     public void openDialogSettings(Context context) {
+        Toast.makeText(VolunteerHomeActivity.this, "Clicked...", Toast.LENGTH_SHORT).show();
+
         dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCancelable(false);
@@ -343,11 +347,20 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
         AppCompatTextView changePassword = dialog.findViewById(R.id.jhsdfadhsfha);
         SwitchCompat toggle_biometric = dialog.findViewById(R.id.toggle_biometric);
 
+
+
+        toggle_biometric.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
         changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(VolunteerHomeActivity.this,ChangePasswordActivity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(VolunteerHomeActivity.this,ChangePasswordActivity.class);
+                startActivity(intent2);
             }
         });
 
