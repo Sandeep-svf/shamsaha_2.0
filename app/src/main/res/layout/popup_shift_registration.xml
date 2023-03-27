@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/jflkasj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:fontFamily="@font/avenir_heavy"
+        android:text="@string/shelf_registration"
+        android:textSize="@dimen/heading_text_18sp"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044"></androidx.appcompat.widget.AppCompatTextView>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        app:layout_constraintTop_toTopOf="@+id/jflkasj"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintWidth_percent="0.1"
+        app:layout_constraintHeight_percent="0.05"
+
+
+        ></de.hdodenhof.circleimageview.CircleImageView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/djsalkjldfka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:fontFamily="@font/avenir_heavy"
+        android:text="@string/shift"
+        android:textSize="@dimen/heading_text_18sp"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.122"></androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintTop_toBottomOf="@+id/djsalkjldfka"
+        app:layout_constraintStart_toStartOf="@+id/djsalkjldfka"
+        android:text="27 March 2023, 6 PM - 6 AM (
+evening Shift)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        ></androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/jhsdfadhsfha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:fontFamily="@font/avenir_heavy"
+        android:text="@string/job"
+        android:textSize="@dimen/heading_text_18sp"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23"></androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintTop_toBottomOf="@+id/jhsdfadhsfha"
+        app:layout_constraintStart_toStartOf="@+id/jhsdfadhsfha"
+        android:text="English Advocacy)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        ></androidx.appcompat.widget.AppCompatTextView>
+</androidx.constraintlayout.widget.ConstraintLayout>

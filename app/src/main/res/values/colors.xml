@@ -13,5 +13,7 @@
     <color name="pink_theam">#F05A94</color>
     <color name="button_theam">#5E5783</color>
     <color name="yellow_theam">#FFC22C</color>
+    <color name="dark_white_deep">#7A7A78</color>
     <color name="dark_white">#B3B2AF</color>
+    <color name="dark_white_light">#D6D5D2</color>
 </resources>

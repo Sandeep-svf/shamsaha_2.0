@@ -144,6 +144,15 @@
     <string name="calendar_mode">Calendar \nMode</string>
     <string name="list_mode">List \nMode</string>
     <string name="open_shift">Open Shift</string>
+    <string name="filters">Filters</string>
+    <string name="all_shift">All Shifts</string>
+    <string name="day_shift">Day shifts</string>
+    <string name="night_shift">Night Shifts</string>
+    <string name="my_shift_slashn">My\nShift</string>
+    <string name="open_shift_slashn">Open\nShifts</string>
+    <string name="shelf_registration">Sift Registration</string>
+    <string name="shift">Shift</string>
+    <string name="job">Job</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>

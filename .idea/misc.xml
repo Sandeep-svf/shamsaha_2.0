@@ -83,14 +83,21 @@
         <entry key="..\:/Users/dmin/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/drawable/circleindicator_round.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/drawable/circleindicator_round_unselected.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/drawable/custim_shift_text_view.xml" value="0.18055555555555555" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/drawable/custom_button_pick.xml" value="0.18796296296296297" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/drawable/custom_button_pick_with_less_radious.xml" value="0.18796296296296297" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/drawable/custom_card_bg.xml" value="0.1925925925925926" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/drawable/custom_shit_button.xml" value="0.18055555555555555" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/drawable/custom_text_view_shift.xml" value="0.19074074074074074" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/activity_chat.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/activity_pick_image.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/activity_vol_resources_kotlin.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/bkgd_shape.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/case_list_view_holder.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_case_report.xml" value="0.19114583333333332" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_case_report_form.xml" value="0.22" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_chat_now.xml" value="0.209375" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_chat_popup.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_contact_us.xml" value="0.14907407407407408" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_event_details.xml" value="0.22" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_event_details2.xml" value="0.20520833333333333" />
@@ -104,15 +111,16 @@
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_swift_swap_request.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol__home.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol__profile.xml" value="0.175" />
-        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol_calendar.xml" value="0.1" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol_calendar.xml" value="0.18" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol_resources.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol_resources_detials.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_volunteer_login.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/menu.xml" value="0.22" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/menu_vol.xml" value="0.33" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/popup_shift_registration.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/resources_view_holder.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/run_wizard_view_holder.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/run_wizard_view_holder_shift_log.xml" value="0.1" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/run_wizard_view_holder_shift_log.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/short_form_1.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/short_form_2.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/short_form_3.xml" value="0.20520833333333333" />
@@ -124,6 +132,7 @@
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/terms3.xml" value="0.33" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/val_resources_details_view_holder.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/valresourcesdetails.xml" value="0.209375" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/vol_shift_list_view_holder.xml" value="0.208" />
       </map>
     </option>
   </component>
@@ -136,7 +145,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.1" />
+        <option name="scale" value="0.22" />
       </ProjectState>
     </option>
   </component>
