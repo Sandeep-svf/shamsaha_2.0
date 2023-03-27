@@ -11,8 +11,6 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sam.shamsaha.R
-
-
 import com.sam.shamsaha.databinding.VolShiftListViewHolderBinding
 import de.hdodenhof.circleimageview.CircleImageView
 

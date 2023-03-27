@@ -2,6 +2,9 @@ package com.sam.shamsaha.volunteer;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatSpinner;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -20,6 +23,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
 import android.webkit.WebView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -171,11 +175,19 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
                 break;
 
 
+
+
+
+            case R.id.logout_layout:
+                Intent intent = new Intent(VolunteerHomeActivity.this, MainActivity.class);
+                startActivity(intent);
+                break;
+
             case R.id.dashboard_layout_vol:
                 navItemIndex=1;
                 CURRENT_TAG = "get_involved";
-                Intent intent = new Intent(VolunteerHomeActivity.this, VolunteerHomeActivity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(VolunteerHomeActivity.this, VolunteerHomeActivity.class);
+                startActivity(intent2);
                 break;
             case R.id.on_duity_backup_layout_vol:
 
@@ -202,6 +214,13 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
             case R.id.client_service_layout_vol:
 
                 openDialog(VolunteerHomeActivity.this);
+                break;
+
+
+
+            case R.id.setting_layout:
+                openDialogSettings(VolunteerHomeActivity.this);
+
                 break;
 
             case R.id.swift_swap_layout_vol:
@@ -288,16 +307,52 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
         dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCancelable(false);
-
-       dialog.setContentView(R.layout.terms3);
+        dialog.setContentView(R.layout.terms3);
 
         ImageView i = dialog.findViewById(R.id.closeBtn2);
+        AppCompatSpinner spin_case_id_list = dialog.findViewById(R.id.spin_case_id_list);
         ProgressBar progressBar = dialog.findViewById(R.id.progressBar6);
         /*WebView webView = dialog.findViewById(R.id.webViewContainer);
         progressBar.setVisibility(View.VISIBLE);
         progressBar.setVisibility(View.GONE);*/
 
+        // spin
+        String[] items = new String[]{ "CI00109", "CI00110", "CI00106", "CI00105", "CI00104"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        spin_case_id_list.setAdapter(adapter);
+
         //   hitApi(context,webView,progressBar);
+        i.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+        dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().getAttributes().windowAnimations = R.anim.fade_in;
+    }
+    public void openDialogSettings(Context context) {
+        dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(false);
+        dialog.setContentView(R.layout.vol_settings_layout);
+
+        ImageView i = dialog.findViewById(R.id.closeBtn2);
+        AppCompatTextView changePassword = dialog.findViewById(R.id.jhsdfadhsfha);
+        SwitchCompat toggle_biometric = dialog.findViewById(R.id.toggle_biometric);
+
+        changePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(VolunteerHomeActivity.this,ChangePasswordActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         i.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

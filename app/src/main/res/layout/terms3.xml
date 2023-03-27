@@ -91,6 +91,15 @@
                 app:layout_constraintTop_toBottomOf="@+id/webViewContainer"
                 app:layout_constraintWidth_percent="0.65">
 
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spin_case_id_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+
+
+                    ></androidx.appcompat.widget.AppCompatSpinner>
+
             </androidx.cardview.widget.CardView>
 
 

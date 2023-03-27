@@ -154,6 +154,8 @@
     <string name="shift">Shift</string>
     <string name="job">Job</string>
     <string name="accept">Accept</string>
+    <string name="change_password">Change Password</string>
+    <string name="enable_biometric">Enable Biometric</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>
