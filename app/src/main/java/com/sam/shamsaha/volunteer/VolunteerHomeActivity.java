@@ -40,6 +40,7 @@ import com.sam.shamsaha.volunteer.casereport.CaseReport;
 import com.sam.shamsaha.volunteer.dashboard.Vol_Home;
 import com.sam.shamsaha.volunteer.inpersonbackup.InPersonBackup;
 import com.sam.shamsaha.volunteer.myshift.MyShift;
+import com.sam.shamsaha.volunteer.pastreport.PastReport;
 import com.sam.shamsaha.volunteer.resources.VolResourcesFragment;
 import com.sam.shamsaha.volunteer.resources.VolResourcesKotlin;
 import com.sam.shamsaha.volunteer.swiftswaprequest.SwiftSwapRequest;
@@ -48,7 +49,7 @@ import com.sam.shamsaha.volunteer.volcalendar.VolCalendar;
 public class VolunteerHomeActivity extends SlidingFragmentActivity implements View.OnClickListener {
 
     RelativeLayout dashboard_layout_vol, my_profile_layout_vol, my_shift_layout_vol, vol_calander_layout_vol, swift_swap_layout_vol,
-            on_duity_backup_layout_vol, client_service_layout_vol,language_backup_layout_vol, inperson_backup_layout_vol, provide_backup_layout_vol, case_report_layout_vol, resourse_layout_vol, event_media_layout, logout_layout, setting_layout;
+            on_duity_backup_layout_vol,past_report_layout, client_service_layout_vol,language_backup_layout_vol, inperson_backup_layout_vol, provide_backup_layout_vol, case_report_layout_vol, resourse_layout_vol, event_media_layout, logout_layout, setting_layout;
 
     AppCompatImageView btnMenu;
     private static final String TAG_DASH_BOARD = "dashboard";
@@ -57,7 +58,7 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
     private static final String home = "home";
     ConstraintLayout container_vol;
     Dialog dialog;
-
+    private AppCompatTextView title;
     private Boolean languageBackupFlag = true;
 
 
@@ -114,6 +115,8 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
     private void inits() {
 
         btnMenu = (AppCompatImageView) findViewById(R.id.btnMenu);
+        title = (AppCompatTextView) findViewById(R.id.title);
+        past_report_layout = (RelativeLayout) findViewById(R.id.past_report_layout);
         my_profile_layout_vol = (RelativeLayout) findViewById(R.id.my_profile_layout_vol);
         client_service_layout_vol = (RelativeLayout) findViewById(R.id.client_service_layout_vol);
         my_shift_layout_vol = (RelativeLayout) findViewById(R.id.my_shift_layout_vol);
@@ -147,6 +150,7 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
     private void inits_menu() {
 
         btnMenu.setOnClickListener(this::onClick);
+        past_report_layout.setOnClickListener(this::onClick);
         client_service_layout_vol.setOnClickListener(this::onClick);
         dashboard_layout_vol.setOnClickListener(this::onClick);
         my_profile_layout_vol.setOnClickListener(this::onClick);
@@ -177,10 +181,17 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
 
 
 
+            case R.id.past_report_layout:
+                PastReport pastReport = new  PastReport();
+                replace_fragment(pastReport);
+                title.setText(getResources().getString(R.string.past_report));
+                break;
+
 
             case R.id.logout_layout:
                 Intent intent = new Intent(VolunteerHomeActivity.this, MainActivity.class);
                 startActivity(intent);
+
                 break;
 
             case R.id.dashboard_layout_vol:
@@ -188,6 +199,7 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
                 CURRENT_TAG = "get_involved";
                 Intent intent24 = new Intent(VolunteerHomeActivity.this, VolunteerHomeActivity.class);
                 startActivity(intent24);
+                title.setText(getResources().getString(R.string.home));
                 break;
             case R.id.on_duity_backup_layout_vol:
 
@@ -220,7 +232,6 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
 
             case R.id.setting_layout:
 
-
                 openDialogSettings(VolunteerHomeActivity.this);
 
                 break;
@@ -250,6 +261,7 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
             case R.id.my_profile_layout_vol:
                 Vol_Profile vol_profile = new Vol_Profile();
                 replace_fragment(vol_profile);
+                title.setText(getResources().getString(R.string.my_profile));
                 break;
 
 
@@ -267,6 +279,7 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
             case R.id.case_report_layout_vol:
                 CaseReport caseReport = new CaseReport();
                 replace_fragment(caseReport);
+                title.setText(getResources().getString(R.string.case_report));
                 break;
 
 

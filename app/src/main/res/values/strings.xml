@@ -157,6 +157,15 @@
     <string name="change_password">Change Password</string>
     <string name="enable_biometric">Enable Biometric</string>
     <string name="old_password">Old Password</string>
+    <string name="past_report">Past Report</string>
+    <string name="new_password">New Password</string>
+    <string name="re_enter_new_password">Re Enter New Password</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="profile">Profile</string>
+    <string name="upcoming">Upcoming Chat</string>
+    <string name="previous">Case Report</string>
+    <string name="unavailable">Unavailable</string>
+    <string name="available" >Available</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>

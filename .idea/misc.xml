@@ -100,6 +100,7 @@
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/case_list_view_holder.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_case_report.xml" value="0.19114583333333332" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_case_report_form.xml" value="0.22" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_case_report_vol_home_list.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_chat_now.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_chat_popup.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_contact_us.xml" value="0.14907407407407408" />
@@ -110,9 +111,11 @@
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_language_backup.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_lock_app.xml" value="0.175" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_my_shift.xml" value="0.1" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_past_report.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_resources_details.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_survivours_support_tools.xml" value="0.25" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_swift_swap_request.xml" value="0.209375" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_upcoming_chat.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol__home.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol__profile.xml" value="0.175" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol_calendar.xml" value="0.18" />
@@ -121,7 +124,7 @@
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_vol_resources_detials.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_volunteer_login.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/menu.xml" value="0.22" />
-        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/menu_vol.xml" value="0.33" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/menu_vol.xml" value="0.22" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/popup_shift_registration.xml" value="0.22" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/resources_view_holder.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/run_wizard_view_holder.xml" value="0.20520833333333333" />
@@ -135,6 +138,7 @@
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/terms2.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/terms2backup.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/terms3.xml" value="0.22" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/upcoming_chat_view_holder.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/val_resources_details_view_holder.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/valresourcesdetails.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/vol_settings_layout.xml" value="0.18" />
