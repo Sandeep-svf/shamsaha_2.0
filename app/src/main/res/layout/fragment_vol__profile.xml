@@ -57,7 +57,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:text="Vol Name"
+                android:text="Lena Wilson"
                 android:textStyle="bold"
                 android:fontFamily="@font/avenir_heavy"
                 android:textSize="@dimen/heading_text_18sp"
@@ -367,9 +367,10 @@
                     android:id="@+id/address_hidden_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
+
+
                     android:visibility="gone"
-
-
 
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -410,7 +411,38 @@
 
                             ></androidx.appcompat.widget.AppCompatTextView>
                     </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
 
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            >
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ic_launcher_background"
+                                android:layout_gravity="center"
+                                ></androidx.appcompat.widget.AppCompatImageView>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="9"
+                            android:text="United State of America"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -452,7 +484,7 @@
 
                     app:layout_constraintTop_toTopOf="parent"
 
-                    android:text="@string/cpr_passport_number"
+                    android:text="@string/case_taken_level"
 
                     android:layout_marginStart="10dp"
 
@@ -464,15 +496,18 @@
 
                 </androidx.appcompat.widget.AppCompatTextView>
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/level_1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     app:layout_constraintStart_toEndOf="@+id/cpr_passport_image"
 
                     app:layout_constraintTop_toBottomOf="@+id/cpr_passport_heading"
 
 
-                    android:text="JDHJD984798324JDKJFSDJS"
+                    app:layout_constraintWidth_percent="0.075"
+                    app:layout_constraintHeight_percent="0.4"
+                    android:src="@drawable/ic_launcher_background"
 
                     android:layout_marginStart="10dp"
 
@@ -482,7 +517,50 @@
 
 
 
-                </androidx.appcompat.widget.AppCompatTextView>
+                </androidx.appcompat.widget.AppCompatImageView>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:id="@+id/level_2"
+                    app:layout_constraintStart_toEndOf="@+id/level_1"
+
+                    app:layout_constraintTop_toBottomOf="@+id/cpr_passport_heading"
+
+
+                    app:layout_constraintWidth_percent="0.075"
+                    app:layout_constraintHeight_percent="0.4"
+                    android:src="@drawable/ic_launcher_background"
+
+                    android:layout_marginStart="10dp"
+
+                    android:fontFamily="@font/avenir_heavy"
+                    android:textSize="@dimen/normal_text_12sp"
+                    >
+
+
+
+                </androidx.appcompat.widget.AppCompatImageView>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toEndOf="@+id/level_2"
+
+                    app:layout_constraintTop_toBottomOf="@+id/cpr_passport_heading"
+
+
+                    app:layout_constraintWidth_percent="0.075"
+                    app:layout_constraintHeight_percent="0.4"
+                    android:src="@drawable/ic_launcher_background"
+
+                    android:layout_marginStart="10dp"
+
+                    android:fontFamily="@font/avenir_heavy"
+                    android:textSize="@dimen/normal_text_12sp"
+                    >
+
+
+
+                </androidx.appcompat.widget.AppCompatImageView>
 
                 <androidx.appcompat.widget.AppCompatImageView
 
@@ -569,6 +647,7 @@
                     android:id="@+id/language_hidden_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:visibility="gone"
 
 
@@ -610,7 +689,7 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/kanguage1_image"
 
-                            android:text="@string/official"
+                            android:text="@string/primary_language"
                             android:gravity="center_vertical"
                             android:layout_marginStart="10dp"
 
@@ -661,7 +740,7 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/additional_image"
 
-                            android:text="@string/official"
+                            android:text="@string/secondary_language"
                             android:gravity="center_vertical"
                             android:layout_marginStart="10dp"
 
@@ -674,7 +753,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/additional_heading"
                             app:layout_constraintStart_toEndOf="@+id/additional_image"
 
-                            android:text="English"
+                            android:text="Arbic"
                             android:gravity="center_vertical"
                             android:textSize="@dimen/heading_text_18sp"
                             android:layout_marginStart="10dp"
@@ -867,7 +946,182 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/id_card_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/language_card_layout"
+            android:layout_marginTop="15dp"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintHeight_percent="0.075"
+            app:cardCornerRadius="4dp"
 
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    android:text="@string/id"
+
+                    android:layout_marginStart="10dp"
+
+                    android:fontFamily="@font/avenir_heavy"
+                    android:textSize="@dimen/heading_text_18sp"
+                    >
+
+
+
+                </androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/id_arrow_down"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+
+                </androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/id_hidden_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/id_arrow_down"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/id_language_lyt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/id_image"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="20dp"
+                            android:src="@drawable/ic_launcher_background"
+                            android:layout_gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            ></androidx.appcompat.widget.AppCompatImageView>
+
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/id_heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/id_image"
+
+                            android:text="@string/national_id"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintTop_toBottomOf="@+id/id_heading"
+                            app:layout_constraintStart_toEndOf="@+id/id_image"
+
+                            android:text="EKQPM1611H"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/heading_text_18sp"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/id_language_lyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/id_image2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="20dp"
+                            android:src="@drawable/ic_launcher_background"
+                            android:layout_gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            ></androidx.appcompat.widget.AppCompatImageView>
+
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/id_heading2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/id_image2"
+
+                            android:text="@string/vol_id"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintTop_toBottomOf="@+id/id_heading2"
+                            app:layout_constraintStart_toEndOf="@+id/id_image2"
+
+                            android:text="VOL1005L"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/heading_text_18sp"
+                            android:layout_marginStart="10dp"
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -881,13 +1135,7 @@
         app:layout_constraintVertical_bias="0.035"
         app:civ_border_width="1dp"
         app:civ_border_color="@color/yellow_theam"
-
-
-
-        android:src="@drawable/ic_launcher_background"
-
-
-
+        android:src="@drawable/user_profile_image"
         ></de.hdodenhof.circleimageview.CircleImageView>
 
 

@@ -364,6 +364,7 @@
         android:id="@+id/vol_image"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:tint="@color/yellow_theam"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -371,16 +372,8 @@
         app:layout_constraintVertical_bias="0.065"
         app:civ_border_width="1dp"
         app:civ_border_color="@color/yellow_theam"
-
-
         app:layout_constraintHeight_percent="0.15"
-
-
-
         android:src="@drawable/user_profile_image"
-
-
-
         ></de.hdodenhof.circleimageview.CircleImageView>
 
 

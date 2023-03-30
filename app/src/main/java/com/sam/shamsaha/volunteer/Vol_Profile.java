@@ -26,16 +26,17 @@ public class Vol_Profile extends Fragment {
 
 
 
-    AppCompatImageView contact_arrow_down, address_arrow_down,language_arrow_down,date_arrow_down;
+    AppCompatImageView contact_arrow_down, address_arrow_down,language_arrow_down,date_arrow_down,id_arrow_down;
     AppCompatImageView edit_vol_profile_image;
     AppCompatTextView vol_name;
 
 
-    LinearLayoutCompat contact_hidden_layout,address_hidden_layout,language_hidden_layout,date_hidden_layout;
+    LinearLayoutCompat contact_hidden_layout,address_hidden_layout,language_hidden_layout,date_hidden_layout,id_hidden_layout;
     private Boolean contactLayoutFlag = true;
     private Boolean addressLayoutFlag = true;
     private Boolean languageLayoutFlag = true;
     private Boolean dateLayoutFlag = true;
+    private Boolean idLayoutFlag = true;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,6 +62,28 @@ public class Vol_Profile extends Fragment {
             }
         });
 
+
+        id_arrow_down.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(idLayoutFlag){
+                    idLayoutFlag = false;
+                    id_hidden_layout.setVisibility(View.VISIBLE);
+                    contact_hidden_layout.setVisibility(View.GONE);
+                    language_hidden_layout.setVisibility(View.GONE);
+                    address_hidden_layout.setVisibility(View.GONE);
+                    date_hidden_layout.setVisibility(View.GONE);
+                    contactLayoutFlag = true;
+                    languageLayoutFlag = true;
+                    addressLayoutFlag = true;
+                    dateLayoutFlag = true;
+                }else{
+                   idLayoutFlag = true;
+                   id_hidden_layout.setVisibility(View.GONE);
+                }
+            }
+        });
+
         date_arrow_down.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,6 +93,8 @@ public class Vol_Profile extends Fragment {
                     contact_hidden_layout.setVisibility(View.GONE);
                     language_hidden_layout.setVisibility(View.GONE);
                     address_hidden_layout.setVisibility(View.GONE);
+                    id_hidden_layout.setVisibility(View.GONE);
+                    idLayoutFlag = true;
                     contactLayoutFlag = true;
                     languageLayoutFlag = true;
                     addressLayoutFlag = true;
@@ -90,6 +115,8 @@ public class Vol_Profile extends Fragment {
                     contact_hidden_layout.setVisibility(View.GONE);
                     address_hidden_layout.setVisibility(View.GONE);
                     date_hidden_layout.setVisibility(View.GONE);
+                    id_hidden_layout.setVisibility(View.GONE);
+                    idLayoutFlag = true;
                     contactLayoutFlag = true;
                     dateLayoutFlag = true;
                     addressLayoutFlag = true;
@@ -109,6 +136,8 @@ public class Vol_Profile extends Fragment {
                     contact_hidden_layout.setVisibility(View.GONE);
                     language_hidden_layout.setVisibility(View.GONE);
                     date_hidden_layout.setVisibility(View.GONE);
+                    id_hidden_layout.setVisibility(View.GONE);
+                    idLayoutFlag = true;
                     contactLayoutFlag = true;
                     languageLayoutFlag = true;
                     dateLayoutFlag = true;
@@ -132,6 +161,8 @@ public class Vol_Profile extends Fragment {
                         address_hidden_layout.setVisibility(View.GONE);
                         language_hidden_layout.setVisibility(View.GONE);
                         date_hidden_layout.setVisibility(View.GONE);
+                        id_hidden_layout.setVisibility(View.GONE);
+                        idLayoutFlag = true;
                         dateLayoutFlag = true;
                         languageLayoutFlag = true;
                         addressLayoutFlag = true;
@@ -148,6 +179,8 @@ public class Vol_Profile extends Fragment {
     }
 
     private void intis(View view) {
+        id_arrow_down = view.findViewById(R.id.id_arrow_down);
+        id_hidden_layout = view.findViewById(R.id.id_hidden_layout);
         vol_name = view.findViewById(R.id.vol_name);
         edit_vol_profile_image = view.findViewById(R.id.edit_vol_profile_image);
         date_arrow_down = view.findViewById(R.id.date_arrow_down);

@@ -165,7 +165,18 @@
     <string name="upcoming">Upcoming Chat</string>
     <string name="previous">Case Report</string>
     <string name="unavailable">Unavailable</string>
-    <string name="available" >Available</string>
+    <string name="available">Available</string>
+    <string name="primary_language">Primary Language</string>
+    <string name="secondary_language">Secondary Language</string>
+    <string name="country_of_location">Country of Location</string>
+    <string name="case_taken_level">Case Taken/Level</string>
+    <string name="id">Id</string>
+    <string name="national_id">National Id</string>
+    <string name="vol_id">Volunteer Id</string>
+    <string name="add_announcement">Add Announcement</string>
+    <string name="title">Title</string>
+    <string name="please_enter_title">Please enter title.</string>
+    <string name="please_enter_description">Please enter description.</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>
