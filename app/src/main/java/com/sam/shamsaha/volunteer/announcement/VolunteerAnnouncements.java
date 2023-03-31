@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -22,6 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.sam.shamsaha.R;
+
 import com.sam.shamsaha.databinding.FragmentVolunteerAnnouncementsBinding;
 import com.sam.shamsaha.volunteer.adapter.AnnouncementListAdapter;
 
@@ -66,14 +68,17 @@ public class VolunteerAnnouncements extends Fragment {
         ImageView i = dialog.findViewById(R.id.closeBtn2);
         AppCompatEditText description = dialog.findViewById(R.id.description_add_announcements);
         AppCompatEditText title = dialog.findViewById(R.id.title_add_announcement);
-        AppCompatEditText button = dialog.findViewById(R.id.add_announcement_button);
+        AppCompatButton button = dialog.findViewById(R.id.add_announcement_button);
 
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(validation()){
-
+                    title.setText("");
+                    description.setText("");
+                    Toast.makeText(getActivity(), getResources().getString(R.string.record_submitted_successfully), Toast.LENGTH_LONG).show();
+                    dialog.dismiss();
                 }
             }
 
@@ -96,6 +101,7 @@ public class VolunteerAnnouncements extends Fragment {
                 dialog.dismiss();
             }
         });
+
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
         dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);

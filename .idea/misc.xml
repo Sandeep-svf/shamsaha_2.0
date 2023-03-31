@@ -101,12 +101,13 @@
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/activity_vol_resources_kotlin.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/activity_volunteer_home.xml" value="0.10182370820668693" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/add_announcemnt.xml" value="0.22" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/advocacy_level.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/alert_list_view_holder.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/announcement_design.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/bkgd_shape.xml" value="0.209375" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/case_list_view_holder.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_accept_pending_alert.xml" value="0.209375" />
-        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_announcements_details.xml" value="0.209375" />
+        <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_announcements_details.xml" value="0.2" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_case_report.xml" value="0.19114583333333332" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_case_report_form.xml" value="0.22" />
         <entry key="..\:/Users/dmin/StudioProjects/shamsaha_2.0/app/src/main/res/layout/fragment_case_report_vol_home_list.xml" value="0.209375" />
@@ -167,7 +168,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.22" />
+        <option name="scale" value="0.2" />
       </ProjectState>
     </option>
   </component>

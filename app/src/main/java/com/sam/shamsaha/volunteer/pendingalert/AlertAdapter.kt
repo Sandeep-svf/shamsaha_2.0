@@ -11,7 +11,7 @@ import com.sam.shamsaha.databinding.CaseListViewHolderBinding
 class AlertAdapter(val context : Context, val alertList : List<AlertListModel>) :
     RecyclerView.Adapter<AlertAdapter.AlertListViewHolderClass>() {
 
-    inner class AlertListViewHolderClass(binding: AlertListViewHolderBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class AlertListViewHolderClass(val binding: AlertListViewHolderBinding) : RecyclerView.ViewHolder(binding.root) {
 
     }
 
@@ -25,9 +25,11 @@ class AlertAdapter(val context : Context, val alertList : List<AlertListModel>) 
     }
 
     override fun onBindViewHolder(holder: AlertListViewHolderClass, position: Int) {
+
         with(holder){
             with(alertList[position]){
-
+                binding.nameAlert.text = this.title
+                binding.dateAlert.text = this.description
             }
         }
     }

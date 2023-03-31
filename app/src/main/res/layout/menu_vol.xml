@@ -603,7 +603,41 @@
                     android:layout_marginBottom="10dp"
                     android:layout_toEndOf="@+id/past_report_img2345"
                     android:layout_toRightOf="@+id/past_report_img2345"
-                    android:text="@string/past_report"
+                    android:text="@string/pending_alert"
+                    android:textColor="@color/white"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/past_case_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/past_case_img2345"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_launcher_background"
+                    android:visibility="gone"
+                    tools:ignore="UseAppTint"/>
+
+                <TextView
+                    android:id="@+id/past_case_text2345"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/past_case_img2345"
+                    android:layout_toRightOf="@+id/past_case_img2345"
+                    android:text="@string/past_case"
                     android:textColor="@color/white"
 
                     android:textSize="16sp"

@@ -43,6 +43,7 @@ import com.sam.shamsaha.volunteer.dashboard.Vol_Home;
 import com.sam.shamsaha.volunteer.inpersonbackup.InPersonBackup;
 import com.sam.shamsaha.volunteer.myshift.MyShift;
 import com.sam.shamsaha.volunteer.pastreport.PastReport;
+import com.sam.shamsaha.volunteer.pendingalert.AcceptPendingAlert;
 import com.sam.shamsaha.volunteer.resources.VolResourcesFragment;
 import com.sam.shamsaha.volunteer.resources.VolResourcesKotlin;
 import com.sam.shamsaha.volunteer.swiftswaprequest.SwiftSwapRequest;
@@ -51,7 +52,7 @@ import com.sam.shamsaha.volunteer.volcalendar.VolCalendar;
 public class VolunteerHomeActivity extends SlidingFragmentActivity implements View.OnClickListener {
 
     RelativeLayout dashboard_layout_vol, my_profile_layout_vol, my_shift_layout_vol, vol_calander_layout_vol, swift_swap_layout_vol,
-            on_duity_backup_layout_vol,past_report_layout, announcements_layout,client_service_layout_vol,language_backup_layout_vol, inperson_backup_layout_vol, provide_backup_layout_vol, case_report_layout_vol, resourse_layout_vol, event_media_layout, logout_layout, setting_layout;
+            on_duity_backup_layout_vol,past_case_layout,past_report_layout, announcements_layout,client_service_layout_vol,language_backup_layout_vol, inperson_backup_layout_vol, provide_backup_layout_vol, case_report_layout_vol, resourse_layout_vol, event_media_layout, logout_layout, setting_layout;
 
     AppCompatImageView btnMenu;
     private static final String TAG_DASH_BOARD = "dashboard";
@@ -120,6 +121,7 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
         title = (AppCompatTextView) findViewById(R.id.title);
         announcements_layout = (RelativeLayout) findViewById(R.id.announcements_layout);
         past_report_layout = (RelativeLayout) findViewById(R.id.past_report_layout);
+        past_case_layout = (RelativeLayout) findViewById(R.id.past_case_layout);
         my_profile_layout_vol = (RelativeLayout) findViewById(R.id.my_profile_layout_vol);
         client_service_layout_vol = (RelativeLayout) findViewById(R.id.client_service_layout_vol);
         my_shift_layout_vol = (RelativeLayout) findViewById(R.id.my_shift_layout_vol);
@@ -155,6 +157,7 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
         btnMenu.setOnClickListener(this::onClick);
         announcements_layout.setOnClickListener(this::onClick);
         past_report_layout.setOnClickListener(this::onClick);
+        past_case_layout.setOnClickListener(this::onClick);
         client_service_layout_vol.setOnClickListener(this::onClick);
         dashboard_layout_vol.setOnClickListener(this::onClick);
         my_profile_layout_vol.setOnClickListener(this::onClick);
@@ -184,6 +187,14 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
 
 
 
+            case R.id.past_case_layout:
+
+                // past cases..
+                PastReport pastReport = new PastReport();
+                replace_fragment(pastReport);
+                title.setText(getResources().getString(R.string.past_report));
+                break;
+
             case R.id.announcements_layout:
 
                 VolunteerAnnouncements volunteerAnnouncements = new VolunteerAnnouncements();
@@ -192,9 +203,10 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
                 break;
 
             case R.id.past_report_layout:
-                PastReport pastReport = new  PastReport();
-                replace_fragment(pastReport);
-                title.setText(getResources().getString(R.string.past_report));
+               // PastReport pastReport = new  PastReport();
+                AcceptPendingAlert acceptPendingAlert = new AcceptPendingAlert();
+                replace_fragment(acceptPendingAlert);
+                title.setText(getResources().getString(R.string.alert));
                 break;
 
 

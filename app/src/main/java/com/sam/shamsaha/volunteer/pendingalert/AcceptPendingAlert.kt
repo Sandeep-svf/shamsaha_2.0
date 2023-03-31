@@ -49,15 +49,25 @@ class AcceptPendingAlert : Fragment() {
 
     private fun load_data() {
         alertList = listOf(
-            AlertListModel("abc","android studio electric eel 2022.1.1 path available"),
-            AlertListModel("abc","android studio electric eel 2022.1.1 path available"),
-            AlertListModel("abc","android studio electric eel 2022.1.1 path available"),
-            AlertListModel("abc","android studio electric eel 2022.1.1 path available"),
-            AlertListModel("abc","android studio electric eel 2022.1.1 path available"),
-            AlertListModel("abc","android studio electric eel 2022.1.1 path available"),
-            AlertListModel("abc","android studio electric eel 2022.1.1 path available"),
-            AlertListModel("abc","android studio electric eel 2022.1.1 path available"),
-            AlertListModel("abc","android studio electric eel 2022.1.1 path available")
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help"),
+            AlertListModel("Lena Wilson","Need Chat help")
+
         )
     }
 

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -31,6 +32,7 @@ public class Vol_Profile extends Fragment {
     AppCompatTextView vol_name;
 
 
+
     LinearLayoutCompat contact_hidden_layout,address_hidden_layout,language_hidden_layout,date_hidden_layout,id_hidden_layout;
     private Boolean contactLayoutFlag = true;
     private Boolean addressLayoutFlag = true;
@@ -45,6 +47,9 @@ public class Vol_Profile extends Fragment {
         View view = inflater.inflate(R.layout.fragment_vol__profile, container, false);
 
         intis(view);
+
+
+
 
 
 
@@ -179,6 +184,7 @@ public class Vol_Profile extends Fragment {
     }
 
     private void intis(View view) {
+
         id_arrow_down = view.findViewById(R.id.id_arrow_down);
         id_hidden_layout = view.findViewById(R.id.id_hidden_layout);
         vol_name = view.findViewById(R.id.vol_name);

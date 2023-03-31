@@ -24,7 +24,6 @@ class CaseReportForm : Fragment() {
         val view = binding.root
 
 
-
         return view;
     }
 

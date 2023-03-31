@@ -1,7 +1,13 @@
 package com.sam.shamsaha.volunteer.dashboard;
 
+import android.app.Dialog;
+import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
@@ -16,6 +22,10 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.android.material.tabs.TabLayout;
@@ -45,6 +55,8 @@ public class Vol_Home extends Fragment {
     public static ViewPager viewPager;
     AppCompatTextView availability_text;
     SwitchMaterial switch_avabililty;
+    ConstraintLayout advocasy_level_layout;
+    private Dialog dialog;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -55,6 +67,14 @@ public class Vol_Home extends Fragment {
 
         intis(view);
 
+
+
+        advocasy_level_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                open_dialog(getActivity());
+            }
+        });
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         setupViewPager(viewPager,adapter);
@@ -102,6 +122,30 @@ public class Vol_Home extends Fragment {
 
         return view;
     }
+
+    private void open_dialog(Context context) {
+
+            dialog = new Dialog(context);
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setCancelable(false);
+
+            dialog.setContentView(R.layout.advocacy_level);
+            ImageView i = dialog.findViewById(R.id.closeBtn2);
+
+
+            i.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                }
+            });
+
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            dialog.show();
+            dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+            dialog.getWindow().getAttributes().windowAnimations = R.anim.fade_in;
+        }
+
     private void replace_fragment(Fragment fragment) {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -110,6 +154,7 @@ public class Vol_Home extends Fragment {
     }
 
     private void intis(View view) {
+         advocasy_level_layout = view.findViewById(R.id.advocasy_level_layout);
         rcv_common_vol_list_data = view.findViewById(R.id.rcv_common_vol_list_data);
         viewPager = view.findViewById(R.id.viewPager);
         switch_avabililty = view.findViewById(R.id.switch_avabililty);
