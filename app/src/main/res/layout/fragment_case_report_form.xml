@@ -73,6 +73,7 @@
 
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dfsdfasdf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -91,19 +92,19 @@
         ></androidx.appcompat.widget.AppCompatTextView>
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="62dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
         android:scaleType="fitXY"
         android:src="@drawable/ic_launcher_background"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/dfsdfasdf"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHeight_percent="0.05"
         app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dfsdfasdf"
         app:layout_constraintVertical_bias="0.051"
-        app:layout_constraintWidth_percent="0.2"></androidx.appcompat.widget.AppCompatImageView>
+        app:layout_constraintWidth_percent="0.1"></androidx.appcompat.widget.AppCompatImageView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

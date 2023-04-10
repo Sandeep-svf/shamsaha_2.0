@@ -14,4 +14,5 @@ public class StaticKey {
     public static final String IS_LOGGED_IN = "IsLoggedIn";
     public static final String VOLUNTEER_FLAG = "1";
     public static final String VICTIM_FLAG = "0";
+    public static final String FORM_URL = "https://shamsaha.com/app/apis/webview/casereport?case_id=CI000883&volunteer=SV000144";
 }

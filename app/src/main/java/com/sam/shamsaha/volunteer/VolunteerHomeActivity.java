@@ -187,10 +187,11 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
 
 
 
+
             case R.id.past_case_layout:
 
                 // past cases..
-                PastReport pastReport = new PastReport();
+                CaseReport pastReport = new CaseReport();
                 replace_fragment(pastReport);
                 title.setText(getResources().getString(R.string.past_report));
                 break;
@@ -208,6 +209,8 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
                 replace_fragment(acceptPendingAlert);
                 title.setText(getResources().getString(R.string.alert));
                 break;
+
+
 
 
             case R.id.logout_layout:

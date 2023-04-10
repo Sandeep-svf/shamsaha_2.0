@@ -185,6 +185,9 @@
     <string name="beginner">Beginner</string>
     <string name="reporting_error">Reporting Errors!</string>
     <string name="admin_notes">Admin Notes</string>
+    <string name="silver">Silver</string>
+    <string name="gold">Gold</string>
+    <string name="platinum">Platinum</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>

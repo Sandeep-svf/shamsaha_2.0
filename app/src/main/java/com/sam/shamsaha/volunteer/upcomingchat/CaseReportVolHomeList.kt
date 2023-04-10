@@ -40,9 +40,6 @@ class CaseReportVolHomeList : Fragment() {
         // attach adapter to the reycler view
         binding.rcvCaseReport.adapter = caseReportAdapter
 
-
-
-
         return view;
     }
 
