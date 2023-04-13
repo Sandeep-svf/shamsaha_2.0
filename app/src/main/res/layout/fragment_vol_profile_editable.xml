@@ -274,7 +274,7 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/phone_image"
 
-                            android:text="@string/phone"
+                            android:text="@string/phone_number"
                             android:textSize="@dimen/heading_text_14sp"
                             android:fontFamily="@font/avenir_book"
                             app:layout_constraintBottom_toTopOf="@+id/phone_edittext"
@@ -348,7 +348,7 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/whatsapp_image"
 
-                            android:text="@string/whatsapp"
+                            android:text="@string/primary_language"
                             android:textSize="@dimen/heading_text_14sp"
                             android:fontFamily="@font/avenir_book"
                             app:layout_constraintBottom_toTopOf="@+id/whatsapp_edittext"
@@ -365,10 +365,10 @@
                             app:layout_constraintStart_toEndOf="@+id/whatsapp_image"
 
                             android:hint="@string/please_enter_your_whatsapp_number"
-                            android:inputType="number"
+                            android:inputType="text"
                             android:maxLines="1"
                             android:backgroundTint="@color/pink_theam"
-                            android:text="9125626628"
+                            android:text="English"
                             android:textSize="@dimen/heading_text_14sp"
                             android:fontFamily="@font/avenir_book"
 
@@ -420,7 +420,7 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/address_image"
 
-                            android:text="@string/address"
+                            android:text="@string/secondary_language"
                             android:textSize="@dimen/heading_text_14sp"
                             android:fontFamily="@font/avenir_book"
                             app:layout_constraintBottom_toTopOf="@+id/address_edittext"
@@ -440,7 +440,7 @@
                             android:inputType="text"
                             android:maxLines="1"
                             android:backgroundTint="@color/pink_theam"
-                            android:text="9125626628"
+                            android:text="Urdu"
                             android:textSize="@dimen/heading_text_14sp"
                             android:fontFamily="@font/avenir_book"
 
@@ -595,7 +595,77 @@
 
                 </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:cardCornerRadius="4dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:elevation="14dp">
 
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/additional_language_image"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintHorizontal_bias="0.05"
+                            android:src="@drawable/ic_launcher_background"
+
+                            ></androidx.appcompat.widget.AppCompatImageView>
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/additional_language_heading"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/additional_language_image"
+
+                            android:text="@string/country_of_location"
+                            android:textSize="@dimen/heading_text_14sp"
+                            android:fontFamily="@font/avenir_book"
+                            app:layout_constraintBottom_toTopOf="@+id/additional_language_edittext"
+
+
+                            ></androidx.appcompat.widget.AppCompatTextView>
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/additional_language_edittext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            app:layout_constraintTop_toBottomOf="@+id/additional_language_heading"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/additional_language_image"
+                            android:hint="@string/please_enter_your_phone_number"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:backgroundTint="@color/pink_theam"
+                            android:text="India"
+                            android:textSize="@dimen/heading_text_14sp"
+                            android:fontFamily="@font/avenir_book"
+
+
+                            ></androidx.appcompat.widget.AppCompatEditText>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
 
                 <RelativeLayout
                     android:layout_marginTop="10dp"
@@ -603,15 +673,16 @@
                     android:layout_height="46dp"
 
                     >
+
                     <androidx.appcompat.widget.AppCompatButton
                         android:layout_width="120dp"
                         android:layout_height="36dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginEnd="20dp"
+                        android:background="@drawable/custom_button"
+                        android:fontFamily="@font/avenir_heavy"
                         android:text="@string/submit"
                         android:textColor="@color/white"
-                        android:fontFamily="@font/avenir_heavy"
-                        android:background="@drawable/custom_button"
 
                         ></androidx.appcompat.widget.AppCompatButton>
                 </RelativeLayout>

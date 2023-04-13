@@ -51,8 +51,7 @@ public class Vol_Home extends Fragment {
 
     RecyclerView rcv_common_vol_list_data;
     ConstraintLayout case_report_layout_vol_dashboard,vol_home_resources;
-    public static TabLayout tabLayout;
-    public static ViewPager viewPager;
+
     AppCompatTextView availability_text;
     SwitchMaterial switch_avabililty;
     ConstraintLayout advocasy_level_layout;
@@ -76,10 +75,10 @@ public class Vol_Home extends Fragment {
             }
         });
 
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
+        /*ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         setupViewPager(viewPager,adapter);
         tabLayout.setupWithViewPager(viewPager);
-        setupTabtitle();
+        setupTabtitle();*/
 
 
 
@@ -156,14 +155,13 @@ public class Vol_Home extends Fragment {
     private void intis(View view) {
          advocasy_level_layout = view.findViewById(R.id.advocasy_level_layout);
         rcv_common_vol_list_data = view.findViewById(R.id.rcv_common_vol_list_data);
-        viewPager = view.findViewById(R.id.viewPager);
+       // viewPager = view.findViewById(R.id.viewPager);
         switch_avabililty = view.findViewById(R.id.switch_avabililty);
         availability_text = view.findViewById(R.id.availability_text);
-        tabLayout = view.findViewById(R.id.tab_layout);
         vol_home_resources = view.findViewById(R.id.vol_home_resources);
         case_report_layout_vol_dashboard = view.findViewById(R.id.case_report_layout_vol_dashboard);
     }
-    private void setupTabtitle() {
+/*    private void setupTabtitle() {
 
 
         tabLayout.getTabAt(0).setText(getResources().getString(R.string.upcoming));
@@ -208,5 +206,5 @@ public class Vol_Home extends Fragment {
         }
 
 
-    }
+    }*/
 }

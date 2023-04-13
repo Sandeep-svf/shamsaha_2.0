@@ -11,4 +11,5 @@
     <dimen name="heading_text_36sp">36sp</dimen>
     <dimen name="heading_text_1sp">1sp</dimen>
     <dimen name="card_corner_radious">8sp</dimen>
+    <dimen name="margin_top_10">5sp</dimen>
 </resources>
