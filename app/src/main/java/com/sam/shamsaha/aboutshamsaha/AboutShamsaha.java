@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.widget.TextView;
 
 import com.sam.shamsaha.R;
 
@@ -15,6 +16,8 @@ import com.sam.shamsaha.R;
 public class AboutShamsaha extends Fragment {
 
     WebView webView;
+    // hhjkhkjh
+    TextView jskljdfk;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
