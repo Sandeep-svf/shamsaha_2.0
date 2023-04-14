@@ -191,7 +191,8 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
             case R.id.past_case_layout:
 
                 // past cases..
-                CaseReport pastReport = new CaseReport();
+                PastReport pastReport = new PastReport();
+                //CaseReport pastReport = new CaseReport();
                 replace_fragment(pastReport);
                 title.setText(getResources().getString(R.string.past_report));
                 break;
@@ -374,7 +375,7 @@ public class VolunteerHomeActivity extends SlidingFragmentActivity implements Vi
         dialog.getWindow().getAttributes().windowAnimations = R.anim.fade_in;
     }
     public void openDialogSettings(Context context) {
-        Toast.makeText(VolunteerHomeActivity.this, "Clicked...", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(VolunteerHomeActivity.this, "Clicked...", Toast.LENGTH_SHORT).show();
 
         dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);

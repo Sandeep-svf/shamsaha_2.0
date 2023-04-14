@@ -29,11 +29,12 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/jflkasj"
                 android:layout_width="wrap_content"
+
                 android:layout_height="wrap_content"
 
 
                 android:fontFamily="@font/avenir_heavy"
-                android:text="@string/shelf_registration"
+                android:text="@string/setting"
                 android:textSize="@dimen/heading_text_18sp"
 
                 app:layout_constraintBottom_toBottomOf="parent"

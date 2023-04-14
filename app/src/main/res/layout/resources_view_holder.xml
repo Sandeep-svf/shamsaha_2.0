@@ -16,12 +16,7 @@
         app:layout_constraintHeight_percent="0.9"
         app:cardCornerRadius="14dp"
         android:background="@color/pink_theam"
-        android:elevation="@dimen/heading_text_14sp"
-
-
-
-
-        >
+        android:elevation="@dimen/heading_text_14sp">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"

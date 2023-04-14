@@ -189,6 +189,7 @@
     <string name="gold">Gold</string>
     <string name="platinum">Platinum</string>
     <string name="incoming_chat">Incoming Chat</string>
+    <string name="disclaimer">Disclaimer- Data is not being collected and their identity is confidential. <font color='#5E5783'>TermsConditon</font></string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>
