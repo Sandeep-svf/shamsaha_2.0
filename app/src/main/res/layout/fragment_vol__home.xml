@@ -18,41 +18,18 @@
         android:background="@drawable/upper_side_custom_background"
         >
 
-        <com.google.android.material.switchmaterial.SwitchMaterial
-            android:id="@+id/switch_avabililty"
-            android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            app:layout_constraintHorizontal_bias="0.1"
 
-
-            app:layout_constraintTop_toTopOf="@+id/vol_home_resources"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            ></com.google.android.material.switchmaterial.SwitchMaterial>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/availability_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/unavailable"
-            app:layout_constraintTop_toBottomOf="@+id/switch_avabililty"
-            app:layout_constraintStart_toStartOf="@+id/switch_avabililty"
-            android:fontFamily="@font/avenir_heavy"
-            android:textSize="@dimen/heading_text_16sp"
-            ></androidx.appcompat.widget.AppCompatTextView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/case_report_layout_vol_dashboard"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHeight_percent="0.1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.25"
-            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintWidth_percent="0.35"
+            app:layout_constraintHorizontal_bias="0.05"
             app:layout_constraintVertical_bias="0.05"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -61,7 +38,6 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/nhu"
                 android:layout_width="35dp"
-                android:visibility="gone"
                 android:layout_height="35dp"
 
                 app:layout_constraintStart_toStartOf="parent"
@@ -76,11 +52,11 @@
                 android:layout_height="wrap_content"
 
 
-                android:visibility="gone"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/nhu"
-                android:text="@string/case_report"
+                android:text="@string/incoming_chat"
                 android:fontFamily="@font/avenir_heavy"
                 android:textSize="@dimen/heading_text_16sp"
 
@@ -387,7 +363,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-
+        android:id="@+id/button_on_duity"
 
         app:layout_constraintWidth_percent="0.25"
         app:layout_constraintHeight_percent="0.05"
@@ -406,13 +382,37 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
+
             android:text="On Duity"
             android:gravity="center"
             android:textColor="@color/white"
             ></androidx.appcompat.widget.AppCompatTextView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_avabililty"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        app:layout_constraintHorizontal_bias="0.1"
 
+        app:layout_constraintBottom_toBottomOf="@+id/button_on_duity"
+
+        app:layout_constraintTop_toTopOf="@+id/button_on_duity"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        ></com.google.android.material.switchmaterial.SwitchMaterial>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/availability_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unavailable"
+        app:layout_constraintTop_toBottomOf="@+id/switch_avabililty"
+        app:layout_constraintStart_toStartOf="@+id/switch_avabililty"
+        android:fontFamily="@font/avenir_heavy"
+        android:textSize="@dimen/heading_text_16sp"
+        ></androidx.appcompat.widget.AppCompatTextView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

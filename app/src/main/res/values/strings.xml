@@ -188,6 +188,7 @@
     <string name="silver">Silver</string>
     <string name="gold">Gold</string>
     <string name="platinum">Platinum</string>
+    <string name="incoming_chat">Incoming Chat</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>

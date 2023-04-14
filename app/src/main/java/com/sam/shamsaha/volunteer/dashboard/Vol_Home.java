@@ -102,8 +102,8 @@ public class Vol_Home extends Fragment {
         vol_home_resources.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Vol_Profile vol_profile = new Vol_Profile();
-                replace_fragment(vol_profile);
+                CaseReport caseReport = new CaseReport();
+                replace_fragment(caseReport);
             }
         });
 
@@ -111,7 +111,7 @@ public class Vol_Home extends Fragment {
             @Override
             public void onClick(View view) {
                 // calling fragment
-                CaseReport caseReport = new CaseReport();
+                UpcomingChat caseReport = new UpcomingChat();
                 replace_fragment(caseReport);
 
             }
