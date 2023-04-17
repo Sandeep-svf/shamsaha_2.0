@@ -395,7 +395,14 @@
         android:layout_height="36dp"
         app:layout_constraintHorizontal_bias="0.1"
 
-        app:layout_constraintBottom_toBottomOf="@+id/button_on_duity"
+
+        android:buttonTint="@color/button_theam"
+        android:backgroundTint="@color/button_theam"
+        android:drawableTint="@color/button_theam"
+        app:thumbTint="@color/white"
+        android:foregroundTint="@color/button_theam"
+        app:trackTint="@color/button_theam"
+
 
         app:layout_constraintTop_toTopOf="@+id/button_on_duity"
 
@@ -408,6 +415,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/unavailable"
+        app:layout_constraintBottom_toBottomOf="@+id/button_on_duity"
         app:layout_constraintTop_toBottomOf="@+id/switch_avabililty"
         app:layout_constraintStart_toStartOf="@+id/switch_avabililty"
         android:fontFamily="@font/avenir_heavy"

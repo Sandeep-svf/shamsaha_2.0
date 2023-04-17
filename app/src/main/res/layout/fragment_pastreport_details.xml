@@ -1,14 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/button_click_effact_color"
     tools:context=".volunteer.pastreport.PastreportDetails">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <androidx.cardview.widget.CardView
 
-</FrameLayout>
+        android:id="@+id/chat_whole_card_view_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+      app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.6"
+        app:cardCornerRadius="@dimen/heading_text_14sp"
+        android:elevation="@dimen/heading_text_14sp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close_icon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+
+                app:layout_constraintHeight_percent="0.075"
+                app:layout_constraintWidth_percent="0.075"
+
+                android:src="@drawable/ic_launcher_background"
+
+                app:layout_constraintVertical_bias="0.05"
+                app:layout_constraintHorizontal_bias="0.9"
+
+                ></androidx.appcompat.widget.AppCompatImageView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toTopOf="@+id/close_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/close_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.1"
+                android:text="CI00123"
+                android:textSize="@dimen/heading_text_18sp"
+                android:fontFamily="@font/avenir_heavy"
+
+
+                ></androidx.appcompat.widget.AppCompatTextView>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

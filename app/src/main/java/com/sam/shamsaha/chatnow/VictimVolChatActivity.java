@@ -11,7 +11,7 @@ import com.sam.shamsaha.R;
 
 public class VictimVolChatActivity extends AppCompatActivity {
 
-    private Thread mMainThread;
+
 
 
     @Override

@@ -51,7 +51,6 @@ public class Vol_Home extends Fragment {
 
     RecyclerView rcv_common_vol_list_data;
     ConstraintLayout case_report_layout_vol_dashboard,vol_home_resources;
-
     AppCompatTextView availability_text;
     SwitchMaterial switch_avabililty;
     ConstraintLayout advocasy_level_layout;

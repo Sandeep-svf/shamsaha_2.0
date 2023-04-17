@@ -92,6 +92,7 @@
         android:layout_height="25dp"
         android:id="@+id/add_announcement"
 
+        android:visibility="gone"
         android:scaleType="fitXY"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintBottom_toBottomOf="@+id/announcements_text_heading"

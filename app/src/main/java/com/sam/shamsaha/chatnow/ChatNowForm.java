@@ -1,22 +1,36 @@
 package com.sam.shamsaha.chatnow;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.sam.shamsaha.MainActivity;
 import com.sam.shamsaha.R;
 import com.sam.shamsaha.databinding.FragmentChatNowFormBinding;
+import com.sam.shamsaha.utility.Splash2Activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +40,8 @@ import java.util.Timer;
 public class ChatNowForm extends Fragment {
 
     FragmentChatNowFormBinding binding;
+    private final int SPLASH_DISPLAY_LENGTH = 1000;
+    private Dialog dialog;
 
 
     private List<String> yesNoList = new ArrayList<>();
@@ -51,6 +67,20 @@ public class ChatNowForm extends Fragment {
        spin_issue_facing_inits();
 
         selectedCountryName = binding.spinCountryCode.getSelectedCountryName().toString();
+
+
+        /* New Handler to start the Menu-Activity
+         * and close this Splash-Screen after some seconds.*/
+        new Handler().postDelayed(new Runnable(){
+            @Override
+            public void run() {
+
+               open_popup(getActivity());
+            }
+        }, SPLASH_DISPLAY_LENGTH);
+
+
+
 
         // Handler...
         binding.chatNowButton.setOnClickListener(new View.OnClickListener() {
@@ -168,7 +198,27 @@ public class ChatNowForm extends Fragment {
 
     }
 
+    private void open_popup(Context context) {
+            dialog = new Dialog(context);
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setCancelable(false);
 
+            dialog.setContentView(R.layout.chat_mandatory_message);
+            AppCompatButton got_it_button = dialog.findViewById(R.id.got_it_button);
+
+
+
+            got_it_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                }
+            });
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            dialog.show();
+            dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+            dialog.getWindow().getAttributes().windowAnimations = R.anim.fade_in;
+        }
 
 
     private boolean validation() {

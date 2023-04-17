@@ -287,7 +287,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         android:layout_marginEnd="10dp"
                         app:layout_constraintEnd_toStartOf="@+id/chat_now_button"
-                        android:src="@drawable/ic_launcher_background"
+                        android:src="@drawable/call_now2"
                         android:elevation="5dp"
                         ></de.hdodenhof.circleimageview.CircleImageView>
 
@@ -299,6 +299,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:fontFamily="@font/avenir_heavy"
                     android:text="@string/disclaimer"
                     ></androidx.appcompat.widget.AppCompatTextView>
 
